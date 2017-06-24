@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Kidy - List</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../App_Themes/img/favicon.ico">
+    <!-- CSS Implementing Plugins -->
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="../App_Themes/css/kidy.min.css">
+    <!-- JS modernizr -->
+    <script src="../Jscripts/kidy.min.js"></script>
+</head>
+
+<body>
+    <!-- site header normal -->
+    <div class="site-header site-header--detail">
+        <div class="container">
+            <div class="site-header__top-bar">
+                <nav class="navbar">
+                    <h1 class="logo">
+                            <a href="#"><img src="../App_Themes/img/logo.png" height="45" width="92" alt="Kidy.vn"></a>
+                        </h1>
+                    <ul class="site-header__related-links">
+                        <li class="visible-md visible-lg"><a href="">Tìm trường</a></li>
+                        <li class="visible-md visible-lg">
+                            <a href="">Tài liệu</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="2-category.html">Bài học</a>
+                                </li>
+                                <li>
+                                    <a href="2-category.html">Bài Test</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="visible-md visible-lg">
+                            <a href="">Giới thiệu</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="2-category.html">Giới thiệu về dự án</a>
+                                </li>
+                                <li>
+                                    <a href="2-category.html">Các phương pháp Giáo dục sớm</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="site-header__user visible-md visible-lg">
+                            <div class="user__account dropdown">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>John Lee</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="#">Đổi mật khẩu</a></li>
+                                    <li><a href="#">Something else</a></li>
+                                    <li><a href="#">Another</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                            <p class="user__avatar"><img src="fig-image/1x1.png" class="img-circle" width="32" height="32" alt=""></p>
+                        </li>
+                        <li class="site-header__btn-wrap visible-xs visible-sm">
+                            <div class="btn btn-info collapsed" role="button" data-toggle="collapse" href="#addition-related-links" aria-expanded="false" aria-controls="addition-related-links">
+                                <span class="fa fa-bars"></span>
+                                <!-- <span class="badge">4</span> -->
+                            </div>
+                            <div class="site-header__related-addition collapse" id="addition-related-links">
+                                <ul>
+                                    <li class=""><a href="1-index.html">Tìm trường</a></li>
+                                    <li class="">
+                                        <a href="">Tài liệu</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="2-category.html">Bài học</a>
+                                            </li>
+                                            <li>
+                                                <a href="2-category.html">Bài Test</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="">Giới thiệu</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="2-category.html">Giới thiệu về dự án</a>
+                                            </li>
+                                            <li>
+                                                <a href="2-category.html">Giới thiệu các phương pháp Giáo dục sớm</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="site-header__user">
+                                        <div class="user__account dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>John Lee</span> <span class="fa fa-caret-down"></span></a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="#">Đổi mật khẩu</a></li>
+                                                <li><a href="#">Something else</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Đăng xuất</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="user__avatar"><img src="fig-image/1x1.png" class="img-circle" width="32" height="32" alt=""></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- site content -->
+    <div class="site-content">
+        <div class="container">
+            <div class="big-map" style="display: none;">
+                <div class="wrapper">
+                    <img src="fig-image/map.png" height="auto" width="100%" alt="">
+                </div>
+                <div class="text-right">
+                    <button class="btn btn-default btn-close">Đóng bản đồ</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-push-3 col-sm-9">
+                    <!-- filter result -->
+                    <div class="filter-result">
+                        <div class="filter-result__col">
+                            <h3 class="filter-result__title">Yên Hòa, Cầu Giấy, Hà Nội</h3>
+                            <p class="filter-result__text">32 trường / tổng 653</p>
+                        </div>
+                        <div class="filter-result__col">
+                            <h3 class="filter-result__title">Phân hệ</h3>
+                            <p class="filter-result__text">Công lập</p>
+                        </div>
+                        <div class="filter-result__col">
+                            <h3 class="filter-result__title">Học phí</h3>
+                            <p class="filter-result__text">2.000.000 - 3.000.000</p>
+                        </div>
+                        <div class="filter-result__col">
+                            <h3 class="filter-result__title">Bể bơi</h3>
+                            <!-- is-green change with class is-blue, is-yellow -->
+                            <p class="filter-result__text is-green"><span class="fa fa-check-circle"></span></p>
+                        </div>
+                        <div class="filter-result__col pull-right">
+                            <a class="a-link" id="filter-change-btn" href="#">Thay đổi</a>
+                        </div>
+                    </div>
+                    <!-- filter change -->
+                    <div class="filter-change">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- add class has-error here when user doesn't fill this input -->
+                                <div class="search-box__bar-wrap has-error">
+                                    <input id="filter-change__input-bar" class="form-control" type="text" placeholder="Địa chỉ tìm kiếm">
+                                    <span class="fa fa-map-marker"></span>
+                                    <!-- suggestion schools -->
+                                    <div class="search-box__suggestion">
+                                        <h4 class="suggestion__header">Cơ sở giáo dục</h4>
+                                        <ul class="suggestion__listing">
+                                            <li>
+                                                <div class="suggestion__school">
+                                                    <div class="suggestion__thumb">
+                                                        <a href="3-detail.html"><img src="fig-image/1x1.png" height="" width="" alt="" class="img-responsive"></a>
+                                                    </div>
+                                                    <h2 class="suggestion__title"><a href="3-detail.html">Trường mầm non Bé gấu (Olympus)</a></h2>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="suggestion__school">
+                                                    <div class="suggestion__thumb">
+                                                        <a href="3-detail.html"><img src="fig-image/1x1.png" height="" width="" alt="" class="img-responsive"></a>
+                                                    </div>
+                                                    <h2 class="suggestion__title"><a href="3-detail.html">Trường mầm non Bé gấu (Olympus)</a></h2>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="suggestion__school">
+                                                    <div class="suggestion__thumb">
+                                                        <a href="3-detail.html"><img src="fig-image/1x1.png" height="" width="" alt="" class="img-responsive"></a>
+                                                    </div>
+                                                    <h2 class="suggestion__title"><a href="3-detail.html">Trường mầm non Bé gấu (Olympus)</a></h2>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="suggestion__nofound">
+                                                    <p class="text-muted">Xin lỗi, chúng tôi không tìm thấy cơ sở giáo dục nào</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <select class="form-control">
+                                    <option value="Phân hệ">Phân hệ</option>
+                                    <option value="Công lập">Công lập</option>
+                                    <option value="Dân lập">Dân lập</option>
+                                    <option value="Bán lập">Bán lập</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <select class="form-control">
+                                    <option value="Học phí">Học phí</option>
+                                    <option value="2.000.000 - 3.000.000">2.000.000 - 3.000.000</option>
+                                    <option value="4.000.000 - 10.000.000">4.000.000 - 10.000.000</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <select class="form-control">
+                                    <option value="Tiện ích">Tiện ích</option>
+                                    <option value="Bể bơi">Bể bơi</option>
+                                    <option value="Giữ trẻ thứ 7">Giữ trẻ thứ 7</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12 btn-group">
+                                <button class="btn btn-default btn-cancel">Hủy</button>
+                                <button class="btn btn-primary btn-submit">Tìm kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <!-- sorting bar -->
+                        <div class="sorting-bar pull-left">
+                            <ul>
+                                <li class="sorting-bar__label">Sắp xếp theo</li>
+                                <li class="sorting-bar__filter is-active"><a href="#">Đề xuất của Kidy</a></li>
+                                <li class="sorting-bar__filter dropdown"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giá <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#">Tăng dần</a></li>
+                                        <li><a href="#">Giảm dần</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sorting-bar__filter dropdown"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tiêu chuẩn <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#">Cao cấp</a></li>
+                                        <li><a href="#">Trung bình</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sorting-bar__filter"><a href="#">Đánh giá <span class="fa fa-angle-up"></span></a></li>
+                            </ul>
+                        </div>
+                        <!-- time out bar -->
+                        <div class="timeout-bar pull-right">
+                            <span>Thời gian truy cập sẽ kết thúc trong <time>29s</time></span>
+                        </div>
+                    </div>
+                    <!-- listing item horizontal -->
+                    <div class="l-list">
+                        <div class="item item--horizontal">
+                            <div class="item__thumb">
+                                <a href="#"><img src="fig-image/1x1.png" class="img-responsive" alt=""></a>
+                                <ul class="item__related-img">
+                                    <li>
+                                        <img src="fig-image/1x1.png" class="img-responsive" alt="">
+                                        <span class="enlarge"><!--span contains the popup image-->
+                                            <img src="fig-image/1x1.png" alt="Blackpool sunset" /> <!--popup image-->
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img src="fig-image/16x10.png" class="img-responsive" alt="">
+                                        <span class="enlarge"><!--span contains the popup image-->
+                                            <img src="fig-image/16x10.png" alt="Blackpool sunset" /> <!--popup image-->
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img src="fig-image/16x9.png" class="img-responsive" alt="">
+                                        <span class="enlarge"><!--span contains the popup image-->
+                                            <img src="fig-image/16x9.png" alt="Blackpool sunset" /> <!--popup image-->
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img src="fig-image/4x3.png" class="img-responsive" alt="">
+                                        <span class="enlarge"><!--span contains the popup image-->
+                                            <img src="fig-image/4x3.png" alt="Blackpool sunset" /> <!--popup image-->
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="item__markup">
+                                    <span class="fa fa-heart-o"></span>
+                                </div>
+                            </div>
+                            <div class="item__info">
+                                <div class="item__title">
+                                    <a href="3-detail.html" class="item__link">Estelle Newton</a>
+                                    <div class="item__rating">
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="item__meta">
+                                    <a class="item__meta-link" href="#"><span class="fa fa-map-marker"></span>Xem trên bản đồ</a>
+                                    <a href="#" class="item__meta-link"><span class="fa fa-home"></span>Địa chỉ: Số 65A, Hai Bà Trưng, Quận Hoàn Kiếm, Hà Nội</a>
+                                </div>
+                                <ul class="item__ulti">
+                                    <li><span class="fa fa-wifi" data-toggle="tooltip" data-placement="bottom" title="Wifi"></span></li>
+                                    <li><span class="fa fa-car" data-toggle="tooltip" data-placement="bottom" title="Có chỗ đậu xe ô tô"></span></li>
+                                    <li><span class="fa fa-cc-mastercard" data-toggle="tooltip" data-placement="bottom" title="Visa/Master card"></span></li>
+                                    <li><span class="fa fa-shopping-basket" data-toggle="tooltip" data-placement="bottom" title="Demo"></span></li>
+                                    <li><span class="fa fa-tripadvisor" data-toggle="tooltip" data-placement="bottom" title="Demo"></span></li>
+                                    <li><span class="fa fa-wifi" data-toggle="tooltip" data-placement="bottom" title="Wifi"></span></li>
+                                    <li><span class="fa fa-car" data-toggle="tooltip" data-placement="bottom" title="Có chỗ đậu xe ô tô"></span></li>
+                                    <li><span class="fa fa-cc-mastercard" data-toggle="tooltip" data-placement="bottom" title="Visa/Master card"></span></li>
+                                    <li><span class="fa fa-shopping-basket" data-toggle="tooltip" data-placement="bottom" title="Demo"></span></li>
+                                    <li><span class="fa fa-tripadvisor" data-toggle="tooltip" data-placement="bottom" title="Demo"></span></li>
+                                </ul>
+                                <div class="item__review">
+                                    <span class="item__score">Đánh giá <b>8.5</b></span>
+                                    <span class="item__comments">Nhận xét <b>85</b></span>
+                                </div>
+                            </div>
+                            <div class="item__addition">
+                                <p class="item__price">2.000.000 đ</p>
+                                <p class="item__meta">Chưa bao gồm chi phí ăn</p>
+                                <a href="3-detail.html" class="btn btn-primary btn-round">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="item item--horizontal">
+                            <div class="item__thumb">
+                                <a href="#"><img src="fig-image/1x1.png" class="img-responsive" alt=""></a>
+                                <ul class="item__related-img">
+                                    <li><img src="fig-image/1x1.png" class="img-responsive" alt=""></li>
+                                    <li><img src="fig-image/1x1.png" class="img-responsive" alt=""></li>
+                                    <li><img src="fig-image/1x1.png" class="img-responsive" alt=""></li>
+                                    <li><img src="fig-image/1x1.png" class="img-responsive" alt=""></li>
+                                </ul>
+                                <div class="item__markup is-marked">
+                                    <span class="fa fa-heart"></span>
+                                </div>
+                            </div>
+                            <div class="item__info">
+                                <div class="item__title">
+                                    <a href="3-detail.html" class="item__link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, optio, aliquam? Quaerat. </a>
+                                    <div class="item__rating">
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star active"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="item__meta">
+                                    <a class="item__meta-link" href="#"><span class="fa fa-map-marker"></span>Xem trên bản đồ</a>
+                                    <a href="#" class="item__meta-link"><span class="fa fa-home"></span>Địa chỉ</a>
+                                </div>
+                                <ul class="item__ulti">
+                                    <li><span class="fa fa-wifi"></span></li>
+                                    <li><span class="fa fa-car"></span></li>
+                                    <li><span class="fa fa-cc-mastercard"></span></li>
+                                    <li><span class="fa fa-shopping-basket"></span></li>
+                                    <li><span class="fa fa-tripadvisor"></span></li>
+                                </ul>
+                                <div class="item__review">
+                                    <span class="item__score">Đánh giá <b>8.5</b></span>
+                                    <span class="item__comments">Nhận xét <b>85</b></span>
+                                </div>
+                            </div>
+                            <div class="item__addition">
+                                <p class="item__price">2.000.000 đ</p>
+                                <p class="item__meta">Chưa bao gồm chi phí ăn</p>
+                                <a href="3-detail.html" class="btn btn-primary btn-round">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination -->
+                    <div class="pagination-wrap">
+                        <ul class="pagination pull-right">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-pull-9 col-sm-3">
+                    <!-- filter zone -->
+                    <div class="filter">
+                        <!-- filter location -->
+                        <div class="filter__location">
+                            <div class="gg-map">
+                                <img src="fig-image/map.png" width="100%" height="150" alt="">
+                            </div>
+                            <button class="btn btn-default btn-round"><span class="fa fa-search-plus"></span>Xem bản đồ</button>
+                        </div>
+                        <!-- filter block  -->
+                        <div class="filter__block">
+                            <h3 class="filter__title">Khoảng cách: </h3>
+                            <input type="text" class="filter__amount amount-distance" readonly>
+                            <div class="filter__content">
+                                <div id="filter-distance"></div>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <h3 class="filter__title">Giá tiền</h3>
+                            <input type="text" class="filter__amount amount-price" readonly>
+                            <div class="filter__content">
+                                <div id="filter-price"></div>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <h3 class="filter__title">Sĩ số học sinh mỗi lớp</h3>
+                            <input type="text" class="filter__amount amount-number" readonly>
+                            <div class="filter__content">
+                                <div id="filter-number"></div>
+                            </div>
+                        </div>
+                        <!-- block with check box -->
+                        <div class="filter__block">
+                            <h3 class="filter__title">Đánh giá</h3>
+                            <div class="filter__content">
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="check5" type="checkbox" name="check" value="check5" checked>
+                                        <label for="check5">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="check4" type="checkbox" name="check" value="check4">
+                                        <label for="check4">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="check3" type="checkbox" name="check" value="check3">
+                                        <label for="check3">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="check2" type="checkbox" name="check" value="check2">
+                                        <label for="check2">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="check1" type="checkbox" name="check" value="check1">
+                                        <label for="check1">
+                                            <span class="fa fa-star"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- block with radio box -->
+                        <div class="filter__block">
+                            <h3 class="filter__title">Phân hệ</h3>
+                            <div class="filter__content">
+                                <div class="filter__row">
+                                    <div class="radio-box">
+                                        <input id="stateschool" type="radio" name="schoolkind" value="stateschool">
+                                        <label for="stateschool">Trường Công</label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="radio-box">
+                                        <input id="semi-stateschool" type="radio" name="schoolkind" value="semi-stateschool" checked>
+                                        <label for="semi-stateschool">Trường Bán Công</label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="radio-box">
+                                        <input id="privateschool" type="radio" name="schoolkind" value="privateschool">
+                                        <label for="privateschool">Trường Dân lập</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- block with check box -->
+                        <div class="filter__block">
+                            <h3 class="filter__title">Tiện ích</h3>
+                            <div class="filter__content">
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="demo01" type="checkbox" name="check" value="demo01">
+                                        <label for="demo01">Sân chơi</label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="demo02" type="checkbox" name="check" value="demo02">
+                                        <label for="demo02">Xe đưa đón</label>
+                                    </div>
+                                </div>
+                                <div class="filter__row">
+                                    <div class="check-box">
+                                        <input id="demo03" type="checkbox" name="check" value="demo03">
+                                        <label for="demo03">Giáo dục sớm</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- zone -->
+            <!-- normal zone -->
+            <div class="zone zone--is-last">
+                <div class="zone__header">
+                    <p><span class="fa fa-graduation-cap"></span></p>
+                    <h2><a class="zone__header-link" href="#">Bài học - Bài Tips</a></h2>
+                </div>
+                <div class="zone__content l-grid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="item item--green">
+                                <div class="item__thumb">
+                                    <a href="3-detail.html"><img src="fig-image/16x9.png" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link"> Advertising Relationships Vs Business Decisions </a></div>
+                                    <div class="item__summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, suscipit delectus aliquid. Cumque, aspernatur, quaerat.
+                                    </div>
+                                    <div class="item__viewmore">
+                                        <a href="3-detail.html" class="btn btn-info btn-round">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="item item--blue">
+                                <div class="item__thumb">
+                                    <a href="3-detail.html"><img src="fig-image/16x9.png" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link"> Advertise Advertise Advertise</a></div>
+                                    <div class="item__summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestiae neque nulla vel illum vero!
+                                    </div>
+                                    <div class="item__viewmore">
+                                        <a href="3-detail.html" class="btn btn-info btn-round">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="item item--yellow">
+                                <div class="item__thumb">
+                                    <a href="3-detail.html"><img src="fig-image/16x9.png" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link">Estelle Newton</a></div>
+                                    <div class="item__summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum aperiam repellat perspiciatis esse, eos dolores!
+                                    </div>
+                                    <div class="item__viewmore">
+                                        <a href="3-detail.html" class="btn btn-info btn-round">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="item item--green">
+                                <div class="item__thumb">
+                                    <a href="3-detail.html"><img src="fig-image/16x9.png" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link">Estelle Newton</a></div>
+                                    <div class="item__summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quo, adipisci dolorum facilis, cumque iste.
+                                    </div>
+                                    <div class="item__viewmore">
+                                        <a href="3-detail.html" class="btn btn-info btn-round">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- site footer  -->
+    <footer class="site-footer">
+        <div class="site-footer__info">
+            <div class="container">
+                <div class="site-footer__col-listing">
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="1-index.html">Tìm trường</a></h3>
+                    </div>
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="2-category.html">Tài liệu</a></h3>
+                        <h4 class="site-footer__text"><a href="2-category.html">Bài học</a></h4>
+                        <h4 class="site-footer__text"><a href="2-category.html">Bài test</a></h4>
+                    </div>
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="2-category.html">Giới thiệu</a></h3>
+                        <h4 class="site-footer__text"><a href="2-category.html">Giới thiệu về dự án</a></h4>
+                        <h4 class="site-footer__text"><a href="2-category.html">Các phương pháp Giáo dục sớm</a><h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-footer__copyright">
+            <p class="text-center">© Copyright 2016 by Kidy.vn</p>
+        </div>
+    </footer>
+    <!-- JS Global Compulsory -->
+    <script src=" ../Jscripts/custom.js "></script>
+    <!-- Js Dev plugin -->
+    <!--[if lt IE 9]>
+        <script src="Jscripts/vendor/respond.js "></script>
+        <script src="Jscripts/vendor/html5shiv.js "></script>
+        <script src="Jscripts/vendor/placeholder-IE-fixes.js "></script>
+    <![endif]-->
+</body>
+
+</html>
