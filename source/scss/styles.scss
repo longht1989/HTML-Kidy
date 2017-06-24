@@ -1,0 +1,67 @@
+// Variable overrides come first (without !default). Bootstrap default variables
+// come second because they use !default (they won't get set if set already) and
+// some of them depend on our overrides.
+
+/* ====================================
+   = BOOTSTARP 3.X + REPLACE VARIABLE =
+   ==================================== */
+
+@import "theme-default/b-variables";
+@import "framework/bootstrap";
+
+/* ====================================
+   = FONTS AND MIXIN                  =
+   ==================================== */
+
+@import "../fonts/font-awesome-4.7.0/css/font-awesome.min.css";
+@import "theme-default/fonts";
+@import "theme-default/mixins/mixins";
+@import "theme-default/mixins/bem";
+
+/* ====================================
+   COMPONENT, BOOTSTARP REPLACE
+   ==================================== */
+
+// @import "theme-default/b-navbar";
+@import "theme-default/b-scaffolding";
+@import "theme-default/share";
+@import "theme-default/component/jquery-ui";
+@import "theme-default/component/search-box";
+@import "theme-default/component/filter";
+@import "theme-default/component/circularprogress";
+
+/* ====================================
+   = Layout                       =
+   ==================================== */
+
+@import "theme-default/layout/layout";
+@import "theme-default/layout/header";
+@import "theme-default/layout/footer";
+
+/* ====================================
+   = Main Style                       =
+   ==================================== */
+
+@import "theme-default/region";
+@import "theme-default/story";
+@import "theme-default/pagination";
+
+/* ====================================
+   = PAGES                            =
+   ==================================== */
+
+@import "theme-default/pages/detail";
+@import "theme-default/pages/forkid";
+@import "theme-default/pages/timeline";
+@import "theme-default/pages/gds";
+@import "theme-default/pages/register";
+@import "theme-default/pages/gds-athome";
+@import "theme-default/pages/pagenotfound";
+@import "theme-default/pages/about";
+@import "theme-default/pages/edit-page";
+
+/* ====================================
+   = Helper class                            =
+   ==================================== */
+
+@import "theme-default/helper/helper";

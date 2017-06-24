@@ -1,0 +1,470 @@
+/* style for detail page */
+
+@include Block(detail) {
+    @include Element(header) {
+        @include clearfix();
+        margin-bottom: 15px;
+    }
+    @include Element(logo) {
+        width: 25%;
+        float: left;
+        background: white;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 3px solid #fff;
+        @include breakpoint(sm) {
+            width: 20%;
+        }
+        @include breakpoint(md) {
+            width: 15%;
+        }
+    }
+    @include Element(title) {
+        margin-bottom: 5px;
+        @include breakpoint(sm) {}
+        h1 {
+            @include font-size(24, 28);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+    @include Element(rating) {
+        display: inline-block;
+        margin-left: 5px;
+        .fa-star {
+            color: $brand-info;
+            font-size: 10px;
+            margin-right: 1px;
+        }
+    }
+    @include Element(kind) {
+        display: inline;
+        font-weight: normal;
+        padding: 3px 10px;
+        font-size: 12px;
+        margin-left: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        white-space: nowrap;
+        &.is-green {
+            color: $brand-danger;
+        }
+        &.is-blue {
+            color: $brand-primary;
+        }
+        &.is-yellow {
+            color: $brand-info;
+        }
+        &.is-red {
+            color: $brand-success;
+        }
+    }
+    @include Element(price) {
+        font-size: 14px;
+        margin-bottom: 5px;
+        @include breakpoint(sm) {
+            float: right;
+            text-align: right;
+            margin-bottom: 0;
+        }
+        b {
+            color: #ce4f4b;
+            font-size: 18px;
+        }
+    }
+    @include Element(share) {
+        margin-top: 3px;
+        // text-align: right;
+    }
+    @include Element(nav-tab) {
+        margin-bottom: 20px;
+        background-color: #e9e9e9;
+        border-bottom: 1px solid #ddd;
+        @include clearfix();
+    }
+    @include Element(tab) {
+        font-size: 16px;
+        font-weight: bold;
+        a {
+            display: block;
+            padding: 5px 10px;
+        }
+        @include breakpoint(sm) {
+            float: left;
+            a {
+                padding: 10px 15px;
+            }
+        }
+        &.active {
+            background-color: #fff;
+        }
+    }
+    @include Element(content-wrap) {
+        @include clearfix();
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        background: white;
+        padding: 15px 20px;
+    }
+    @include Element(main-content) {
+        @include clearfix();
+        height: 205px;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 40px;
+        @include transition(max-height, 1, ease);
+        &.show {
+            padding-bottom: 0;
+            height: initial;
+            .view-less {
+                display: block;
+            }
+        }
+        p,
+        h3,
+        h4,
+        h5,
+        div {
+            margin-bottom: 10px;
+        }
+        h3,
+        h4,
+        h5 {
+            font-weight: bold;
+        }
+        .view-more {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: center;
+            height: 60px;
+            line-height: 20px;
+            padding-top: 45px;
+            margin-bottom: 0;
+            background: linear-gradient(to bottom, transparent, #fff);
+            cursor: pointer;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+        .view-less {
+            cursor: pointer;
+            text-align: center;
+            display: none;
+            margin: 10px 0 0;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    @include Element(general-content) {
+        margin-bottom: 20px;
+        .fa-circle {
+            font-size: 6px;
+            margin-right: 8px;
+            color: #b0b0b0;
+            vertical-align: middle;
+        }
+        li {
+            margin-bottom: 10px;
+            @include last-child-y();
+        }
+        p,
+        h3,
+        h4,
+        h5 {
+            margin-bottom: 10px;
+        }
+        h3,
+        h4,
+        h5 {
+            font-weight: bold;
+        }
+    }
+    @include Element(block) {
+        background-color: #FFF;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+        @include Element(title) {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            .fa {
+                margin-right: 5px;
+            }
+        }
+        @include Element(content) {
+            li {
+                position: relative;
+                h5 {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                margin-bottom: 10px;
+                .fa-home {
+                    float: left;
+                    display: block;
+                    margin-right: 10px;
+                }
+                .fa-edit {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+            .box-content-add {
+                margin-top: 5px;
+            }
+        }
+    }
+    @include Element(listing-utility) {
+        @include clearfix();
+    }
+    @include Element(utility) {
+        @include clearfix();
+        width: 50%;
+        float: left;
+        padding-right: 5px;
+        margin-bottom: 10px;
+        color: #666;
+        font-size: 13px;
+        &:nth-child(2n) {
+            padding-right: 0;
+            padding-left: 5px;
+        }
+        .circularProgress {
+            float: left;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+            padding: 0;
+            &:nth-child(2n) {
+                padding: 0;
+            }
+        }
+    }
+    @include Element(utility-title) {
+        padding-left: 20px;
+        margin-top: 10px;
+        margin-left: 7px;
+        float: left;
+        position: relative;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 15px;
+            height: 1px;
+            background-color: #ddd;
+        }
+    }
+    @include Element(slider) {
+        margin-bottom: 20px;
+        position: relative;
+        .bx-viewport {
+            img {
+                max-width: initial;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .bx-wrapper .bx-pager {
+            bottom: -95px;
+        }
+        .bx-wrapper .bx-pager a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            opacity: .8;
+            @include transition();
+            img {
+                width: 100%;
+                // height: auto;
+                height: 100%; // waiting Linh crop image
+            }
+            @include breakpoint(xs) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .bx-wrapper .bx-pager a:hover,
+        .bx-wrapper .bx-pager a.active {
+            opacity: 1;
+        }
+        .bx-wrapper {}
+        .bx-pager {
+            margin-top: 10px;
+            @include clearfix();
+            &-item {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        .bxslider-control {
+            .fa {
+                font-size: 36px;
+                color: white;
+                position: relative;
+                a {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                &.fa-angle-left {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    margin-top: -18px;
+                }
+                &.fa-angle-right {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    margin-top: -18px;
+                }
+            }
+        }
+    }
+    @include Element(review) {
+        .detail__block__title {
+            margin-bottom: 25px;
+        }
+        .login-box {
+            >span {
+                cursor: pointer;
+                color: #a7b4ba;
+            }
+        }
+        .form-control {
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding-left: 40px;
+            padding-right: 40px;
+            @include breakpoint(xs) {
+                margin-bottom: 20px;
+            }
+        }
+        .filter__block {
+            margin: 0;
+            padding: 0;
+            .note {
+                font-size: 12px;
+                color: #a7b4ba;
+                margin-top: 5px;
+            }
+        }
+        .filter__amount {
+            display: inline;
+            margin: 0 0 0 10px;
+            max-width: 60px;
+            float: none;
+        }
+    }
+    @include Element(menu) {
+        margin-bottom: 20px;
+        background: $brand-primary;
+        @include clearfix;
+        li {
+            float: left;
+            @include font-size(16, 35);
+            @include transition(all, 0.2, ease);
+            + li {
+                margin-left: 1px;
+            }
+            a {
+                padding: 0 15px;
+                display: block;
+                color: white;
+            }
+            &.is-active,
+            &:hover,
+            &:active,
+            &:focus {
+                background: darken($brand-primary, 10%);
+            }
+        }
+        &.is-red {
+            background: $brand-success;
+            li {
+                &.is-active,
+                &:hover,
+                &:active,
+                &:focus {
+                    background: darken($brand-success, 10%);
+                }
+            }
+        }
+        &.is-yellow {
+            background: $brand-info;
+            li {
+                &.is-active,
+                &:hover,
+                &:active,
+                &:focus {
+                    background: darken($brand-info, 10%);
+                }
+            }
+        }
+        &.is-green {
+            background: $brand-danger;
+            li {
+                &.is-active,
+                &:hover,
+                &:active,
+                &:focus {
+                    background: darken($brand-danger, 10%);
+                }
+                a {
+                    color: #111;
+                }
+            }
+        }
+    }
+}
+
+@include Block(detail-review) {
+    @include Element(listing) {
+        li {
+            padding: 15px;
+            background-color: #fff;
+            @include clearfix();
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+    }
+    @include Element(score) {
+        float: left;
+        color: #cf4f4b;
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+    }
+    @include Element(content) {
+        overflow: hidden;
+    }
+    @include Element(customer) {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+        time {
+            font-weight: normal;
+            margin-left: 10px;
+            color: #8c8c8c;
+            font-style: italic;
+        }
+    }
+}

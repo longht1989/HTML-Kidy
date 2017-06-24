@@ -1,0 +1,351 @@
+/* ===============================
+   Header's style   
+   =============================== */
+
+.site-header {
+    z-index: 100;
+    &__top-bar {
+        @include clearfix();
+        padding: 25px 0;
+        .logo {
+            text-align: center;
+            float: left;
+            @include breakpoint(sm) {
+                float: left;
+            }
+        }
+    }
+    &__related-links {
+        @include clearfix();
+        @include font-size(18, 35);
+        @include breakpoint(xs) {
+            float: right;
+        }
+        @include breakpoint(sm) {
+            display: block;
+            float: right;
+            margin-top: 0;
+        }
+        > li {
+            float: left;
+            margin-left: 30px;
+            text-transform: uppercase;
+            position: relative;
+            a {
+                .cover & {
+                    color: white;
+                    &:hover {
+                        color: #ccc;
+                    }
+                }
+            }
+            > .sub-menu {
+                display: none;
+                position: absolute;
+                left: auto;
+                top: 100%;
+                width: 300px;
+                text-transform: none;
+                z-index: 10;
+                padding: 5px 10px;
+                background: rgba(0, 0, 0, 0.9);
+                border-radius: 5px;
+                @include font-size(16, 19);
+                > li {
+                    margin: 10px 0;
+                    a {
+                        display: block;
+                    }
+                }
+            }
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+            }
+        }
+        .fa {
+            margin-right: 8px;
+        }
+    }
+    &__related-addition {
+        @include font-size(16, 30);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 100;
+        @include breakpoint(sm) {
+            width: initial;
+        }
+        li {
+            display: block;
+            float: none;
+            margin: 0 0 5px 0;
+            padding-top: 10px;
+            border-top: 1px solid #555;
+            &:first-child {
+                padding-top: 0;
+                border-top: none;
+            }
+            a {
+                color: white;
+                &:hover {
+                    color: #ccc;
+                }
+            }
+            .sub-menu {
+                @include font-size(16, 19);
+                text-transform: none;
+                >li {
+                    margin: 10px 0;
+                    padding-top: 0;
+                    border-top: none;
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &__btn-wrap {
+        position: static !important;
+        @include breakpoint(sm) {}
+        > .btn {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            border-radius: 50%;
+            text-align: center;
+            padding: 0;
+            margin: 0 5px;
+            @include font-size(17, 35);
+            .fa {
+                margin-right: 0;
+            }
+            .badge {
+                border-radius: 50%;
+                position: absolute;
+                background-color: $brand-primary;
+                color: white;
+                padding: 3px 5px;
+                font-size: 12px;
+                line-height: 1;
+                top: -2px;
+                right: -2px;
+                min-width: 15px;
+                min-height: 15px;
+            }
+        }
+        .btn-info {
+            @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+            -webkit-box-shadow: 0px 0px 10px 3px rgba(245, 164, 34, .6);
+            box-shadow: 0px 0px 10px 3px rgba(245, 164, 34, .6);
+        }
+        .btn-default {
+            -webkit-box-shadow: 0 0 10px 3px rgba(222, 222, 222, 0.6);
+            box-shadow: 0 0 10px 3px rgba(222, 222, 222, 0.6);
+        }
+    }
+    // wrap menu button
+    .wrap-menu {
+        margin-left: 10px;
+    }
+    // wrap search button
+    .wrap-search {
+        position: relative;
+        @include breakpoint(0px, 480px) {
+            position: static;
+            .site-header__quick-search.in {
+                left: 0;
+                right: 0;
+                top: 100%;
+                padding: 10px 20px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.9);
+                height: 55px !important;
+            }
+        }
+    }
+    &__quick-search {
+        display: block;
+        right: calc(100% + 20px);
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        border: 1px solid #c9c9c9;
+        border-radius: 4px;
+        height: 35px !important;
+        width: 0;
+        min-width: 0;
+        @include transition();
+        border-color: transparent;
+        // style for collapse
+        &.in {
+            background-color: #FFF;
+            width: 100%;
+            min-width: 300px;
+            border-color: #c9c9c9;
+            @include breakpoint(sm) {
+                min-width: 420px;
+            }
+            @include breakpoint(md) {
+                min-width: 690px;
+            }
+            > input {
+                display: block;
+            }
+        }
+        @include breakpoint(md) {}
+        .fa {
+            padding: 0 10px;
+        }
+        > input {
+            border: none;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 35px;
+            width: 100%;
+            display: none;
+            @include font-size(16, 35);
+            @include haf() {
+                outline: none;
+            }
+        }
+        // display in modal
+        .modal & {
+            display: block;
+        }
+    }
+    &__user {
+        @include clearfix;
+        padding-left: 30px;
+        border-left: 1px solid #eee;
+        text-transform: none !important;
+        .user__account {
+            float: left;
+            margin-right: 10px;
+            .site-header__btn-wrap & {
+                float: none;
+                display: inline-block;
+            }
+            span {
+                &:first-child {
+                    max-width: 100px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: inline-block;
+                    float: left;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .user__avatar {
+            float: left;
+            .site-header__btn-wrap & {
+                float: none;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@include Block(site-header) {
+    @include Modifier(detail) {
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+        &.affix {
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        .site-header__top-bar {
+            padding: 10px 0;
+            .sub-menu {
+                background-color: #fff!important;
+                border: 1px solid #ccc!important;
+            }
+            .site-header__btn-wrap {
+                .sub-menu {
+                    background-color: #191919 !important;
+                    border: none !important;
+                }
+                .site-header__user {
+                    text-align: right;
+                    border-left: none;
+                }
+                .dropdown-menu {
+                    background: #191919;
+                }
+            }
+        }
+    }
+    @include Element(slogan) {
+        color: white;
+        position: relative;
+        h2 {
+            font-size: 24px;
+            line-height: 1.5em;
+            text-align: center;
+            @include breakpoint(sm) {
+                text-align: left;
+            }
+            @include breakpoint(md) {
+                font-size: 32px;
+            }
+        }
+        small {
+            display: inline-block;
+            color: white;
+            line-height: 1em;
+            margin-top: 10px;
+            font-size: 18px;
+            @include breakpoint(md) {
+                font-size: 20px;
+                margin-top: 0;
+            }
+        }
+        .cta-group {
+            margin-top: 20px;
+            @include breakpoint(xs) {
+                text-align: center;
+            }
+            @include breakpoint(md) {
+                text-align: left;
+                margin-top: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        .btn-border {
+            min-width: 130px;
+            margin-right: 15px;
+            color: white;
+            border-color: white;
+            @include haf() {
+                background-color: $brand-primary;
+                border-color: $brand-primary;
+            }
+        }
+    }
+    .navbar {
+        margin-bottom: 0;
+    }
+}
+
+.cover {
+    // background: url(../img/header-bg.png) center top no-repeat;
+    background-image: url(../img/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @include breakpoint(md) {
+        padding-bottom: 60px;
+    }
+}

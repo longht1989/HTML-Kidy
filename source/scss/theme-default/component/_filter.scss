@@ -1,0 +1,164 @@
+/* filter component */
+
+@include Block(filter) {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    @include Element(location) {
+        position: relative;
+        .btn-default {
+            position: absolute;
+            bottom: -15px;
+            left: calc(50% - 60px);
+            border: 1px solid #ddd;
+        }
+    }
+    @include Element(block) {
+        padding: 25px 0px;
+        margin: 0 15px;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    @include Element(title) {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    @include Element(amount) {
+        width: 100%;
+        display: block;
+        margin-top: -10px;
+        margin-bottom: 15px;
+        background: none;
+        border: none;
+        font-size: 13px;
+        color: $brand-primary;
+    }
+    .fa-star {
+        color: $brand-info;
+        font-size: 18px;
+    }
+    @include Element(row) {
+        font-size: 13px;
+        color: #6d6d6d;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* filter-result */
+
+@include Block(filter-result) {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    @include clearfix();
+    position: relative;
+    @include Element(col) {
+        float: left;
+        max-width: 25%;
+        padding: 20px;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #ddd;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        &.pull-right {
+            position: absolute;
+            top: calc(50% - 8px);
+            right: 15px;
+            padding: 0;
+            >a {
+                color: $brand-primary;
+            }
+        }
+        @include respond-to-sm-only() {
+            width: 25%;
+            &.pull-right {
+                width: initial;
+                right: 0;
+                top: calc(100% + 5px);
+            }
+        }
+        @include breakpoint(xs) {
+            max-width: 100%;
+            float: none;
+            &::after {
+                top: inital;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+            }
+            &.pull-right {
+                width: initial;
+                right: 0;
+                top: calc(100% + 5px);
+            }
+        }
+    }
+    @include Element(title) {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    @include Element(text) {
+        color: #666;
+        font-size: 13px;
+        line-height: 18px;
+        .fa-check-circle {
+            font-size: 18px;
+        }
+        &.is-green {
+            .fa-check-circle {
+                color: $brand-danger;
+            }
+        }
+        &.is-blue {
+            .fa-check-circle {
+                color: $brand-primary;
+            }
+        }
+        &.is-yellow {
+            .fa-check-circle {
+                color: $brand-info;
+            }
+        }
+    }
+}
+
+
+/* filter change */
+
+.filter-change {
+    @include clearfix();
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 20px;
+    display: none;
+    .form-control {
+        margin-bottom: 10px;
+    }
+    .btn-group {
+        text-align: right;
+    }
+    .btn {
+        margin-left: 10px;
+    }
+    
+}
