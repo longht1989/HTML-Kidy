@@ -46,6 +46,7 @@ a.a-link {
     border-radius: 30px;
 }
 
+// form control
 .form-control {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -54,6 +55,16 @@ a.a-link {
     border-radius: 3px;
     &:focus {
         border-color: darken($brand-primary, 15%);
+    }
+    .has-error & {
+        border-color: $brand-success;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        &:focus {
+            border-color: darken($brand-success, 15%);
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
     }
 }
 
