@@ -20,14 +20,35 @@
         }
     }
     &__info {
-        color: white;
-        background-color: #313851;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        color: white; // background-color: #313851;
+        padding: 80px 0;
+        position: relative;
+    }
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        filter: blur(2px);
+        &::before {
+            background-color: rgba(0, 0, 0, 0.4);
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     }
     &__copyright {
         background-color: #202434;
-        padding: 40px 0;
+        padding: 20px 0;
         color: #858585;
         font-size: 12px;
     }
@@ -40,12 +61,28 @@
         span,
         a {
             display: inline-block;
-            // padding-right: 10px;
-            background-color: #313851;
-            color: #aaa;
-            // position: absolute;
+            color: white;
+            @include transition(all, 0.2, ease-out);
             &:hover {
-                color: white;
+                .fa {
+                    color: $brand-primary;
+                }
+                color: $brand-primary;
+            }
+            .fa {
+                margin-right: 3px;
+            }
+        }
+    }
+    &__social {
+        .fa {
+            font-size: 24px;
+            color: white;
+            &:hover {
+                color: $brand-primary;
+            }
+            &+.fa {
+                margin-left: 7px;
             }
         }
     }
@@ -59,7 +96,7 @@
         margin-bottom: 5px;
     }
     &__story-link {
-        color: white;
+        color: #aaa;
         &:hover {
             color: #ccc;
         }
@@ -86,9 +123,9 @@
     &__text {
         // @include font-size(14, 23);
         a {
-            color: #979797;
+            color: #aaa;
             &:hover {
-                color: white;
+                color: $brand-primary;
             }
         }
     }

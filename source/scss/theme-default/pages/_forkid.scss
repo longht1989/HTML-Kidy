@@ -189,8 +189,7 @@
                     >a {
                         border: none;
                         padding: 5px 10px;
-                        color: #999;
-                        // &,
+                        color: #999; // &,
                         &:hover,
                         &:focus {
                             border: none;
@@ -198,7 +197,7 @@
                             color: $brand-primary;
                         }
                     }
-                    &.active > a {
+                    &.active>a {
                         color: $brand-primary;
                         &,
                         &:hover,
@@ -348,10 +347,9 @@
     }
     &__listing {
         li {
-            float: left;
-            width: 50%;
-            vertical-align: top;
-            margin-bottom: 10px;
+            &+li {
+                margin-top: 10px;
+            }
             &::before {
                 content: '';
                 font-family: 'fontawesome';
@@ -363,7 +361,6 @@
         }
     }
 }
-
 
 /* lesson style */
 
@@ -408,8 +405,7 @@
         display: none;
         position: absolute;
         bottom: 100%;
-        left: 0;
-        // margin-left: -75px;
+        left: 0; // margin-left: -75px;
         margin-bottom: 15px;
         transform: translate(-25%, 0);
         padding: 10px;
@@ -611,6 +607,8 @@
         }
     }
 }
+
+
 
 
 /* album */
