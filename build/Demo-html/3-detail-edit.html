@@ -124,8 +124,8 @@
                 <div class="col-xs-12">
                     <h2 class="edit__hdr"><b>Cập nhật bổ sung thông tin trường của bạn</b></h2>
                 </div>
-                <!-- desktop navbar -->
                 <div class="col-xs-12 col-md-3">
+                    <!-- desktop navbar -->
                     <ul class="edit__navbar">
                         <li class="is-active"><a href="#block01">Giới thiệu</a></li>
                         <li><a href="#block02">Thông tin chung</a></li>
@@ -136,6 +136,33 @@
                         <li><a href="#block07">Các chi nhánh khác:</a></li>
                         <li><a href="#block08">Tiện ích</a></li>
                     </ul>
+                    <!-- change avatar -->
+                    <div class="edit__wrap">
+                        <h2 class="edit__wrap-title">Ảnh đại diện</h2>
+                        <div class="edit__block-content">
+                            <div class="user__avatar"><img class="img-responsive" src="https://source.unsplash.com/random/768x768?sig=55" alt=""></div>
+                            <br>
+                            <div class="text-center">
+                                <label class="btn btn-primary btn-sm" for="image-upload">Cập nhật ảnh đại diện</label>
+                                <input id="image-upload" type="file" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- new avatar -->
+                    <div class="edit__wrap">
+                        <h2 class="edit__wrap-title">Ảnh đại diện</h2>
+                        <div class="edit__block-content">
+                            <div class="item item--new">
+                                <div class="item__info">
+                                    <div class="item__create"><span class="fa fa-plus"></span></div>
+                                    <div class="item__summary">Cập nhật ảnh đại diện</div>
+                                    <label for="image-upload" class="album__upload-img">
+                                        <input id="image-upload" type="file" class="hidden">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- edit info -->
                 <div class="col-xs-12 col-md-9">
@@ -585,28 +612,38 @@
     </div>
     </div>
     <!-- site footer  -->
-    <footer class="site-footer ">
-        <div class="site-footer__info ">
-            <div class="container ">
-                <div class="site-footer__col-listing ">
-                    <div class="site-footer__col ">
-                        <h3 class="site-footer__title "><a href="1-index.html ">Tìm trường</a></h3>
+    <footer class="site-footer">
+        <div class="site-footer__info">
+            <div class="container">
+                <div class="site-footer__col-listing">
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="1-index.html"><span class="fa fa-search"></span> Tìm trường</a></h3>
                     </div>
-                    <div class="site-footer__col ">
-                        <h3 class="site-footer__title "><a href="2-category.html ">Tài liệu</a></h3>
-                        <h4 class="site-footer__text "><a href="2-category.html ">Bài học</a></h4>
-                        <h4 class="site-footer__text "><a href="2-category.html ">Bài test</a></h4>
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="2-category.html"><span class="fa fa-file-text-o"></span> Tài liệu</a></h3>
+                        <h4 class="site-footer__text"><a href="2-category.html">Bài học</a></h4>
+                        <h4 class="site-footer__text"><a href="2-category.html">Bài test</a></h4>
                     </div>
-                    <div class="site-footer__col ">
-                        <h3 class="site-footer__title "><a href="2-category.html ">Giới thiệu</a></h3>
-                        <h4 class="site-footer__text "><a href="2-category.html ">Giới thiệu về dự án</a></h4>
-                        <h4 class="site-footer__text "><a href="2-category.html ">Các phương pháp Giáo dục sớm</a><h4>
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="2-category.html"><span class="fa fa-users"></span> Giới thiệu</a></h3>
+                        <h4 class="site-footer__text"><a href="2-category.html">Giới thiệu về dự án</a></h4>
+                        <h4 class="site-footer__text"><a href="2-category.html">Các phương pháp Giáo dục sớm</a><h4>
+                    </div>
+                    <div class="site-footer__col">
+                        <h3 class="site-footer__title"><a href="2-category.html"><span class="fa fa-phone"></span> Liên hệ</a></h3>
+                        <div class="site-footer__social">
+                            <a href="#" class="fa fa-facebook-square"></a>
+                            <a href="#" class="fa fa-google-plus-square"></a>
+                            <a href="#" class="fa fa-twitter-square"></a>
+                            <a href="#" class="fa fa-envelope-square"></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="site-footer__background" style="background-image: url(https://source.unsplash.com/1zR3WNSTnvY/3200x1800)"></div>
         </div>
-        <div class="site-footer__copyright ">
-            <p class="text-center ">© Copyright 2016 by Kidy.vn</p>
+        <div class="site-footer__copyright">
+            <p class="text-center">© Copyright 2016 by Kidy.vn</p>
         </div>
     </footer>
     <!-- JS Global Compulsory -->
