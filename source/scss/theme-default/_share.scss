@@ -5,9 +5,7 @@ a.a-link {
     }
 }
 
-
-/* button border  */
-
+// button border 
 .btn {
     font-size: 14px;
     -webkit-border-radius: 3px;
@@ -68,12 +66,11 @@ a.a-link {
     }
 }
 
-
-/* .big-heading */
-
+// .big-heading
 .big-heading {
     @include clearfix;
-    @include font-size(30, 40);
+    font-size: 30px;
+    line-height: 40px;
     font-family: $font-family-itim;
     color: $brand-primary;
     margin-bottom: 20px;
@@ -81,21 +78,20 @@ a.a-link {
         margin-right: 7px;
     }
     .heading-desc {
-        @include font-size(14, 19);
+        font-size: 14px;
+        line-height: 19px;
         color: #111;
         font-family: $font-family-base;
     }
 }
 
-
-/* style for checkbox & radiobox */
-
+// style for checkbox & radiobox
 .check-box {
     // position: relative;
     input[type=checkbox],
     input[type=radio] {
         display: none;
-        &:checked + label::before {
+        &:checked+label::before {
             content: "";
             font-family: "fontawesome";
             text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
@@ -137,7 +133,7 @@ a.a-link {
 .radio-box {
     @extend .check-box;
     input[type=radio] {
-        &:checked + label::before {
+        &:checked+label::before {
             content: '';
             font-size: 7px;
             text-align: center;
@@ -151,9 +147,7 @@ a.a-link {
     }
 }
 
-
-/* progress bar */
-
+// progress bar
 .progress {
     height: 32px;
     border-radius: 16px;
@@ -169,9 +163,7 @@ a.a-link {
     }
 }
 
-
-/* sorting bar */
-
+// sorting bar
 @include Block(sorting-bar) {
     @include clearfix();
     margin-bottom: 15px;
@@ -192,9 +184,7 @@ a.a-link {
     }
 }
 
-
-/* timeout-bar */
-
+// timeout-bar
 .timeout-bar {
     margin-bottom: 15px;
     text-align: right;
@@ -207,9 +197,7 @@ a.a-link {
     }
 }
 
-
-/* .loading-box */
-
+// .loading-box
 .loading-box {
     z-index: 100;
     position: fixed;
@@ -229,15 +217,16 @@ a.a-link {
             width: 100%;
             margin-top: 0;
         }
+        &.is-full {
+            width: 100%;
+        }
     }
     &.is-child {
         position: static;
     }
 }
 
-
-/* not found box */
-
+// not found box
 .not-found {
     margin-bottom: 30px;
     padding: 20px;
@@ -252,9 +241,7 @@ a.a-link {
     }
 }
 
-
-/* bigmap */
-
+// bigmap
 .big-map {
     // display: none;
     // width: 0;
@@ -267,9 +254,7 @@ a.a-link {
     }
 }
 
-
-/* bread crumb */
-
+// bread crumb
 .breadcrumb {
     padding: 0;
     margin-bottom: $line-height-computed;
@@ -277,9 +262,9 @@ a.a-link {
     background-color: none;
     border-radius: $border-radius-base;
     font-weight: bold;
-    > li {
+    >li {
         display: inline-block;
-        + li:before {
+        +li:before {
             // [converter] Workaround for https://github.com/sass/libsass/issues/1115
             $nbsp: "\00a0";
             content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
@@ -287,7 +272,7 @@ a.a-link {
             color: #000;
         }
     }
-    > .active {
+    >.active {
         color: #000;
         font-size: 18px;
         &::before {
@@ -304,9 +289,7 @@ a.a-link {
     }
 }
 
-
-/* popup message */
-
+// popup message
 .popup {
     display: none;
     position: fixed;

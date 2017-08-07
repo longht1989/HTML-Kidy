@@ -30,26 +30,22 @@
     .summary,
     .meta {
         margin-bottom: 5px;
-    }
-    // story with bold title
+    } // story with bold title
     &.story-bold {
         .title {
             font-weight: bold;
         }
-    }
-    // story cover
+    } // story cover
     &.story-cover {
         .title {
             @include font-size(20, 28);
-        }
-        //story include video
+        } //story include video
         .thumb {
-            > [id^=video_] {
+            >[id^=video_] {
                 width: 100% !important;
             }
         }
-    }
-    // story with left thumbnail
+    } // story with left thumbnail
     &.story-left {
         .thumb {
             float: left;
@@ -58,8 +54,7 @@
         .title {
             margin-top: -3px;
         }
-    }
-    // story with red bullet 
+    } // story with red bullet 
     &.story-bullet {
         margin-bottom: 10px;
         @include last-child-y;
@@ -72,13 +67,12 @@
                 font-family: "fontawesome";
             }
         }
-    }
-    // story with mask 
+    } // story with mask 
     &.story-mask {
         .thumb {
             z-index: 1;
         }
-        > header {
+        >header {
             position: relative;
             padding: 10px;
             background: #fff;
@@ -88,7 +82,7 @@
             z-index: 2;
         }
         &.story-cover {
-            > header {
+            >header {
                 padding: 20px;
                 margin-top: -50px;
                 margin-right: 20px;
@@ -124,7 +118,8 @@
         font-weight: bold;
     }
     &__summary {
-        margin-top: 10px;
+        color: #555;
+        margin-top: 5px;
         font-size: 13px;
         @include transition;
         p {
@@ -168,8 +163,7 @@
         // color: lighten($brand-primary, 10%);
         font-size: 20px;
         @include transition;
-    }
-    // modifier element
+    } // modifier element
     &--green {
         .fa-check-circle,
         .item__status {
@@ -302,8 +296,7 @@
             li {
                 // overflow: hidden;
                 float: left;
-                margin-right: 5px;
-                // margin-bottom: 5px;
+                margin-right: 5px; // margin-bottom: 5px;
                 border: 1px solid #fff;
                 width: 20px;
                 height: 20px;
@@ -341,8 +334,7 @@
                 }
                 &:hover {
                     .enlarge {
-                        left: auto;
-                        // top: -300px;
+                        left: auto; // top: -300px;
                     }
                 }
             }

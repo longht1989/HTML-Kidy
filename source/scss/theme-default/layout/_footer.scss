@@ -9,8 +9,7 @@
         @include breakpoint(sm) {
             margin-bottom: 0;
             display: inline-block;
-            margin-left: 60px;
-            text-align: right;
+            margin-left: 60px; // text-align: right;
             float: left;
         }
     }
@@ -58,7 +57,7 @@
         color: #919191;
         font-size: 24px;
         height: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         span,
         a {
             display: inline-block;
@@ -72,6 +71,7 @@
             }
             .fa {
                 margin-right: 3px;
+                font-size: 0.8em;
             }
         }
     }
@@ -90,7 +90,7 @@
     &__story,
     &__text,
     .form-control {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     &__story-title {
         font-size: 14px;

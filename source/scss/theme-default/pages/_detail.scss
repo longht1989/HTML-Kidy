@@ -73,8 +73,7 @@
         }
     }
     @include Element(share) {
-        margin-top: 3px;
-        // text-align: right;
+        margin-top: 3px; // text-align: right;
     }
     @include Element(nav-tab) {
         margin-bottom: 20px;
@@ -139,13 +138,19 @@
             left: 0;
             text-align: center;
             height: 60px;
-            line-height: 20px;
-            padding-top: 45px;
+            line-height: 35px;
+            padding-top: 25px;
             margin-bottom: 0;
-            background: linear-gradient(to bottom, transparent, #fff);
+            background: linear-gradient(to bottom, transparent, #fff 30%);
             cursor: pointer;
             &:hover {
-                color: $brand-primary;
+                a {
+                    color: $brand-success;
+                }
+            }
+            .fa {
+                margin-left: 5px;
+                font-size: 0.9em;
             }
         }
         .view-less {
@@ -154,7 +159,13 @@
             display: none;
             margin: 10px 0 0;
             &:hover {
-                color: $brand-primary;
+                a {
+                    color: $brand-success;
+                }
+            }
+            .fa {
+                margin-left: 5px;
+                font-size: 0.9em;
             }
         }
     }
@@ -282,8 +293,7 @@
             opacity: .8;
             @include transition();
             img {
-                width: 100%;
-                // height: auto;
+                width: 100%; // height: auto;
                 height: 100%; // waiting Linh crop image
             }
             @include breakpoint(xs) {
@@ -377,7 +387,7 @@
             float: left;
             @include font-size(16, 35);
             @include transition(all, 0.2, ease);
-            + li {
+            +li {
                 margin-left: 1px;
             }
             a {
