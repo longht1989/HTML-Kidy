@@ -7,7 +7,7 @@
         border-radius: 5px;
         margin-bottom: 10px;
         li {
-            & + li {
+            &+li {
                 margin-top: 10px;
             }
             &.is-active {
@@ -21,7 +21,7 @@
         margin-bottom: 20px;
     }
     &__block {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include clearfix;
         .item--new {
             @include breakpoint(sm) {
@@ -37,7 +37,8 @@
         @include clearfix;
     }
     &__wrap-title {
-        @include font-size(22, 28);
+        font-size: 22px;
+        line-height: 28px;
         margin-bottom: 10px;
         font-weight: bold;
         text-transform: uppercase;
@@ -48,9 +49,13 @@
     &__block-hdr {
         margin-bottom: 10px;
         h3 {
-            @include font-size(18, 24);
+            font-size: 18px;
+            line-height: 24px;
             font-weight: bold;
             margin-bottom: 5px;
         }
+    }
+    &__block-content {
+        margin-bottom: 10px;
     }
 }
