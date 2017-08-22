@@ -25,7 +25,7 @@
         @include clearfix;
         .item--new {
             @include breakpoint(sm) {
-                min-height: initial;
+                min-height: 96px;
             }
         }
     }
@@ -49,7 +49,7 @@
     &__block-hdr {
         margin-bottom: 10px;
         h3 {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 24px;
             font-weight: bold;
             margin-bottom: 5px;

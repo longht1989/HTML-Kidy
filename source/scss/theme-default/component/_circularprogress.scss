@@ -6,7 +6,7 @@ $dangerBarColor: $brand-success;
 $overlayColor: #fff;
 $backColor: #f2f2f2;
 $barHeight: 16px;
-$elementSize: 44px;
+$elementSize: 40px;
 
 $step: 1; // step of % (100/$step = number of created classes)
 $loops: round(100 / $step);
@@ -38,7 +38,7 @@ $half: round($loops / 2);
         margin-top: $barHeight/2;
         text-align: center;
         line-height: $elementSize - $barHeight;
-        font-size: 14px;
+        font-size: 12px;
     }
     // Loop for creating modifier classes
     @for $i from 0 through $loops {
