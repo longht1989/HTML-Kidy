@@ -352,6 +352,27 @@
                                     <textarea rows="3" type="text" class="form-control" id="study-school-desc-01" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates deserunt est culpa nisi doloribus ea dolore illo, harum inventore soluta."></textarea>
                                 </div>
                             </div>
+                            <!-- edit block action -->
+                            <div class="edit__action text-right">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#confirmDelete1"><span class="fa fa-trash"></span> Xóa trường</button>
+                                <button class="btn btn-primary"><span class="fa fa-edit"></span> Sửa & Lưu thông tin</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="confirmDelete1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title text-center" id="myModalLabel">Bạn muốn xóa trường hiện tại</h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                                    <button type="button" class="btn btn-success">Xóa ngay</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <!-- school 02 -->
@@ -415,7 +436,7 @@
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
-                                        <option value="5">5</option>
+                                        <option selected value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="7">7</option>
                                         <option value="8">8</option>
@@ -423,8 +444,29 @@
                                         <option value="10">10</option>
                                     </select>
                                 </div>
+                                <div class="edit__action text-right">
+                                    <button class="btn btn-success" data-toggle="modal" data-target="#confirmDelete2"><span class="fa fa-trash"></span> Xóa kỹ năng</button>
+                                    <button class="btn btn-primary"><span class="fa fa-edit"></span> Sửa & Lưu thông tin</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="confirmDelete2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title text-center" id="myModalLabel">Bạn muốn xóa kỹ năng hiện tại</h4>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="text-center">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                                        <button type="button" class="btn btn-success">Xóa ngay</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <hr>
                         <!-- skill 02 -->
                         <div class="skill-02">
                             <!-- block -->
