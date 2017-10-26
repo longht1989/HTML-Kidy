@@ -57,5 +57,9 @@
     }
     &__block-content {
         margin-bottom: 10px;
+        .search-box__bar-wrap {}
+        .search-box__input-bar {
+            border-color: #ccc;
+        }
     }
 }
