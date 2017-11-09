@@ -33,10 +33,9 @@
         z-index: -1;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        filter: blur(2px);
+        background-position: top 35% left; // filter: blur(2px);
         &::before {
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.3);
             content: '';
             display: block;
             position: absolute;
@@ -55,9 +54,10 @@
     &__title {
         position: relative;
         color: #919191;
-        font-size: 24px;
+        font-size: 18px;
         height: 30px;
         margin-bottom: 15px;
+        text-transform: uppercase;
         span,
         a {
             display: inline-block;
@@ -70,8 +70,7 @@
                 color: $brand-primary;
             }
             .fa {
-                margin-right: 3px;
-                font-size: 0.8em;
+                margin-right: 3px; // font-size: 0.8em;
             }
         }
     }
@@ -123,8 +122,10 @@
     }
     &__text {
         // @include font-size(14, 23);
+            font-size: 16px;
+            line-height: 21px;
         a {
-            color: #aaa;
+            color: #fff;
             &:hover {
                 color: $brand-primary;
             }

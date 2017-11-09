@@ -87,6 +87,7 @@
                 border: none;
             }
             &__thumb {
+                margin-bottom: 8px;
                 &::after {
                     display: block;
                     content: '';
@@ -118,7 +119,7 @@
             }
             &__title {
                 font-size: 14px;
-                margin: 8px 0 5px;
+                margin: 0px 0 5px;
             }
             &__summary {
                 margin-top: 0;
