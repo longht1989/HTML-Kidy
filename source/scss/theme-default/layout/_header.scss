@@ -42,10 +42,11 @@
             >.sub-menu {
                 display: none;
                 position: absolute;
-                left: auto;
+                right: -10px;
                 top: 100%;
                 width: 300px;
                 text-transform: none;
+                text-align: right;
                 z-index: 10;
                 padding: 5px 10px;
                 background: rgba(0, 0, 0, 0.9);
@@ -353,6 +354,15 @@
             @include haf() {
                 background-color: $brand-primary;
                 border-color: $brand-primary;
+            }
+        }
+        &.logged-in {
+            h2 {
+                @include breakpoint(md) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
         }
     }
