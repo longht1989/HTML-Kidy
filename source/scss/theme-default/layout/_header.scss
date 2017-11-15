@@ -163,6 +163,16 @@
             -webkit-box-shadow: 0 0 10px 3px rgba(222, 222, 222, 0.6);
             box-shadow: 0 0 10px 3px rgba(222, 222, 222, 0.6);
         }
+        .site-header__user {
+            @include breakpoint(xs) {
+                text-align: right;
+                border-left: none;
+            }
+            @include breakpoint(sm) {
+                text-align: right;
+                border-left: none;
+            }
+        }
     } // wrap menu button
     .wrap-menu {
         margin-left: 10px;
