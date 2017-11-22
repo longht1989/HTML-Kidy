@@ -154,7 +154,7 @@ a.a-link {
     &-bar {
         line-height: 32px;
         text-align: left;
-        
+
         padding-left: 15px;
         .pull-right {
             font-size: 1.1em;
@@ -327,4 +327,12 @@ a.a-link {
         font-size: 18px;
         cursor: pointer;
     }
+}
+
+// background white box
+.bg-white {
+    background: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

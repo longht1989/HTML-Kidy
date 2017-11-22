@@ -20,11 +20,42 @@
 
 .zone {
     margin-bottom: 30px;
+    /* feautured zone with item listing */
+    &--featured {
+        @include clearfix;
+        .item--mask {
+            .item__title {
+                font-size: 22px;
+            }
+        }
+        .item--mask-sm {
+            .item__title {
+                font-size: 18px;
+            }
+        }
+        @include breakpoint(sm) {
+            .item--mask {
+                margin-bottom: 0.01%;
+            }
+            .item--mask-sm {
+                width: 49.99%;
+                float: left;
+            }
+        }
+        @include breakpoint(md) {
+            .item--mask {
+                width: 66.66%;
+                float: left;
+            }
+            .item--mask-sm {
+                width: 33.33%;
+                float: right;
+            }
+        }
+    }
 }
 
-
-/* home slider */
-
+// home slider
 .slider-zone {
     .bx-wrapper {
         max-width: 100% !important;
