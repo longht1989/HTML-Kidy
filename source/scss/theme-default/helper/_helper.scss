@@ -29,3 +29,10 @@
 .pt60 {
     padding-top: 60px;
 }
+
+.link-primary {
+    color: $brand-primary;
+    &:hover {
+        color: $brand-success;
+    }
+}
