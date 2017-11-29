@@ -18,7 +18,7 @@
         }
         .toolbar {
             position: relative;
-            padding-left: 10px; // background: linear-gradient(to right, #d30056, transparent);
+            padding-left: 10px;
             .forkid__navbar-item {
                 font-weight: normal;
                 &:hover {
@@ -26,23 +26,7 @@
                 }
             }
             @include breakpoint(sm) {
-                float: right; // &::before {
-                //     content: '';
-                //     display: block;
-                //     position: absolute;
-                //     left: 0;
-                //     top: 0;
-                //     bottom: 0;
-                //     height: 100%;
-                //     width: 10px;
-                //     border: 10px solid #d30056;
-                //     border-top-width: 25px;
-                //     border-bottom-width: 25px;
-                //     border-left-width: 5px;
-                //     border-left-color: $brand-info;
-                //     border-top-color: $brand-info;
-                //     border-bottom-color: $brand-info;
-                // }
+                float: right;
             }
         }
     }
@@ -221,6 +205,29 @@
             font-size: 14px;
             text-transform: uppercase;
             color: $brand-primary;
+        }
+        .item--horizontal {
+            border: none;
+            margin-bottom: 0;
+            &+.item--horizontal {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #eee;
+            }
+            &:hover {
+                box-shadow: none;
+            }
+            .item__thumb {
+                margin-right: 15px;
+            }
+            .item__info {
+                width: initial;
+                float: none;
+                padding: 0
+            }
+            .item__title {
+                font-size: 16px;
+            }
         }
     }
 }

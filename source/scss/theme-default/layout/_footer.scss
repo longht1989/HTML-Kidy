@@ -23,28 +23,30 @@
         padding: 80px 0;
         position: relative;
         overflow: hidden;
-    }
-    &__background {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background-repeat: no-repeat;
         background-size: cover;
-        background-position: top 35% center;
-        &::before {
-            background-color: rgba(0, 0, 0, 0.3);
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
+        background-position: center center;
+        background-image: url(../img/f-bg.png);
+    } // &__background {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     background-position: center center;
+    //     &::before {
+    //         background-color: rgba(0, 0, 0, 0.3);
+    //         content: '';
+    //         display: block;
+    //         position: absolute;
+    //         top: 0;
+    //         right: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //     }
+    // }
     &__copyright {
         background-color: #202434;
         padding: 20px 0;
