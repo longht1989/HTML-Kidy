@@ -206,19 +206,27 @@
             text-transform: uppercase;
             color: $brand-primary;
         }
-        .item--horizontal {
+        &__content {
+            @include clearfix;
+        }
+        .item {
             border: none;
-            margin-bottom: 0;
-            &+.item--horizontal {
-                margin-top: 10px;
-                padding-top: 10px;
-                border-top: 1px solid #eee;
+            margin-bottom: 15px;
+            float: left;
+            width: 50%;
+            padding-left: 8px;
+            padding-right: 8px;
+            @include breakpoint(sm) {
+                width: 33%;
             }
             &:hover {
                 box-shadow: none;
             }
             .item__thumb {
-                margin-right: 15px;
+                margin-bottom: 5px;
+                img {
+                    border-radius: 5px;
+                }
             }
             .item__info {
                 width: initial;
