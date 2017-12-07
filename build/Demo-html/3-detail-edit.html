@@ -133,6 +133,7 @@
                         <li><a href="#block04">Tuyển sinh</a></li>
                         <li><a href="#block05">Thư viện</a></li>
                         <li><a href="#block06">Liên hệ</a></li>
+                        <li><a href="#block10">Danh sách giáo viên</a></li>
                         <li><a href="#block07">Các chi nhánh khác:</a></li>
                         <li><a href="#block08">Tiện ích</a></li>
                     </ul>
@@ -666,7 +667,205 @@
                             <button class="btn btn-default">Hủy</button>
                             <button class="btn btn-primary">Xác nhận & Lưu</button>
                         </div>
-                        <!-- block -->
+                    </div>
+                    <!-- Danh sách giáo viên -->
+                    <div class="edit__wrap" id="block10">
+                        <h2 class="edit__wrap-title">Danh sách quản lý trường</h2>
+                        <!-- block udpate, required -->
+                        <div class="edit__block is-required">
+                            <div class="edit__block-hdr">
+                                <h3 title="Thông tin bắt buộc">Đội ngũ nhân sự quản lý trường <small class="text-success">Thông tin bắt buộc*</small></h3>
+                                <p class="text-muted">Danh sách nhân sự quản lý trường</p>
+                            </div>
+                            <div class="edit__block-content">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2">
+                                        <div class="edit__block-hdr">
+                                            <h3 title="Ảnh đại diện">Ảnh đại diện</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <div class="user__avatar"><img class="img-responsive" src="https://source.unsplash.com/random/768x768?sig=100" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-10">
+                                        <div class="edit__block-hdr">
+                                            <h3>Tên quản lý</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_name" class="form-control" placeholder="Phạm Chính Hữu">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Chức vụ</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Hiệu trưởng">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Mô tả ngắn</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2">
+                                        <div class="edit__block-hdr">
+                                            <h3 title="Ảnh đại diện">Ảnh đại diện</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <div class="item item--new">
+                                                <div class="item__info">
+                                                    <div class="item__create"><span class="fa fa-plus"></span></div>
+                                                    <div class="item__summary">Cập nhật ảnh đại diện</div>
+                                                    <label for="image-upload" class="album__upload-img">
+                                                        <input id="image-upload" type="file" class="hidden">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-10">
+                                        <div class="edit__block-hdr">
+                                            <h3>Tên quản lý</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_name" class="form-control" placeholder="Phạm Chính Hữu">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Chức vụ</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Hiệu trưởng">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Mô tả ngắn</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- submit block -->
+                        <div class="edit__submit text-right">
+                            <button class="pull-left btn btn-info"><span class="fa fa-plus"></span> Thêm quản lý</button>
+                            <button class="btn btn-default">Hủy</button>
+                            <button class="btn btn-primary">Xác nhận & Lưu</button>
+                        </div>
+                        <br>
+                        <h2 class="edit__wrap-title">Danh sách giáo viên</h2>
+                        <!-- block udpate, required -->
+                        <div class="edit__block is-required">
+                            <div class="edit__block-hdr">
+                                <h3 title="Thông tin bắt buộc">Đội ngũ giáo viên của trường <small class="text-success">Thông tin bắt buộc*</small></h3>
+                                <p class="text-muted">Đội ngũ giáo viên của trường</p>
+                            </div>
+                            <div class="edit__block-content">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2">
+                                        <div class="edit__block-hdr">
+                                            <h3 title="Ảnh đại diện">Ảnh đại diện</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <div class="user__avatar"><img class="img-responsive" src="https://source.unsplash.com/random/768x768?sig=101" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-10">
+                                        <div class="edit__block-hdr">
+                                            <h3>Tên giáo viên</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_name" class="form-control" placeholder="Hoàng Nguyễn Khánh Trang">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="edit__block-hdr">
+                                                    <h3>Chuyên môn</h3>
+                                                </div>
+                                                <div class="edit__block-content">
+                                                    <input type="text" id="trainer-01_title" class="form-control" placeholder="Giáo viên Montessori">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="edit__block-hdr">
+                                                    <h3>Chứng chỉ IPD</h3>
+                                                </div>
+                                                <div class="edit__block-content">
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="radio-box">
+                                                                <input id="stateschool" type="radio" name="certificate" value="stateschool">
+                                                                <label for="stateschool">Có</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="radio-box">
+                                                                <input id="semi-stateschool" type="radio" name="certificate" value="semi-stateschool" checked>
+                                                                <label for="semi-stateschool">Không</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Mô tả ngắn</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2">
+                                        <div class="edit__block-hdr">
+                                            <h3 title="Ảnh đại diện">Ảnh đại diện</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <div class="item item--new">
+                                                <div class="item__info">
+                                                    <div class="item__create"><span class="fa fa-plus"></span></div>
+                                                    <div class="item__summary">Cập nhật ảnh đại diện</div>
+                                                    <label for="image-upload" class="album__upload-img">
+                                                        <input id="image-upload" type="file" class="hidden">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-10">
+                                        <div class="edit__block-hdr">
+                                            <h3>Tên giáo viên</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_name" class="form-control" placeholder="Phạm Chính Hữu">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Chức vụ</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Hiệu trưởng">
+                                        </div>
+                                        <div class="edit__block-hdr">
+                                            <h3>Mô tả ngắn</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- submit block -->
+                        <div class="edit__submit text-right">
+                            <button class="pull-left btn btn-info"><span class="fa fa-plus"></span> Thêm giáo viên</button>
+                            <button class="btn btn-default">Hủy</button>
+                            <button class="btn btn-primary">Xác nhận & Lưu</button>
+                        </div>
                     </div>
                     <!-- Các chi nhánh khác -->
                     <div class="edit__wrap" id="block07">
