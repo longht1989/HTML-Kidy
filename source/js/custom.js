@@ -86,9 +86,6 @@ $(function() {
     });
     $(".amount-age").val($("#filter-age").slider("values", 0) + " tháng - " + $("#filter-age").slider("values", 1) + " tháng");
 
-
-
-
     // create image shadow
     $('.item--img-shadow').each(function() {
         var imgshadow = $(this).find('.img-responsive').attr("src");
@@ -206,6 +203,12 @@ $(function() {
     $('.status__comment a').click(function() {
         $(this).parent('.status__comment').siblings('.status__reply-input').slideDown('fast');
     });
+});
+
+// index hero slider
+$('.site-header__slogan .featured-slider').bxSlider({
+    controls: 0,
+    auto: 1
 });
 
 /*  ===
