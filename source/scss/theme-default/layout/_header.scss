@@ -273,9 +273,24 @@
         }
         .user__avatar {
             float: left;
+            position: relative;
             .site-header__btn-wrap & {
                 float: none;
                 display: inline-block;
+            }
+            .badge {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 12px;
+                line-height: 1em;
+                padding: 4px;
+                border-radius: 50%;
+                background: $brand-success;
+                color: white;
+                min-width: 20px;
+                text-align: center;
+                transform: translate(25%, 0%);
             }
         }
     }

@@ -107,6 +107,7 @@
     @include Element(content-wrap) {
         @include clearfix();
         margin-bottom: 20px;
+        font-size: 16px;
         line-height: 1.5em;
         background: white;
         padding: 15px 20px;
@@ -193,6 +194,17 @@
                 }
             }
         }
+        .story-left {
+            .thumb {
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            &+.story-left {
+                margin-top: 10px;
+                padding-top: 15px;
+                border-top: 1px solid #eee;
+            }
+        }
     }
     @include Element(main-content) {
         @include clearfix();
@@ -201,7 +213,8 @@
         position: relative;
         padding-bottom: 40px;
         @include transition(max-height, 1, ease);
-        &.show {
+        &.show,
+        &.is-full {
             padding-bottom: 0;
             height: initial;
             .view-less {
@@ -229,9 +242,8 @@
             height: 60px;
             line-height: 35px;
             padding-top: 25px;
-            margin-bottom: 0;
-            // background: linear-gradient(to bottom, transparent, #fff 30%);
-            background: linear-gradient(rgba(255,255,255,0), #fff 30%);
+            margin-bottom: 0; // background: linear-gradient(to bottom, transparent, #fff 30%);
+            background: linear-gradient(rgba(255, 255, 255, 0), #fff 30%);
             cursor: pointer;
             &:hover {
                 a {
@@ -492,7 +504,7 @@
         @include clearfix;
         li {
             float: left;
-            @include font-size(16, 35);
+            @include font-size(14, 35);
             @include transition(all, 0.2, ease);
             +li {
                 margin-left: 1px;

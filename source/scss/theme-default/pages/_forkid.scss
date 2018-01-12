@@ -281,6 +281,18 @@
         }
     }
     &__chart {}
+    &__school {
+        margin-top: 10px;
+        a {
+            color: $brand-primary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__alias {
+        color: #999;
+    }
 }
 
 .teacher {

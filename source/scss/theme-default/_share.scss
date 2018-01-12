@@ -64,6 +64,14 @@ a.a-link {
             box-shadow: none;
         }
     }
+    &.is-filled {
+        border-color: transparent;
+        background: #f0f0f0;
+        box-shadow: none;
+        &:focus {
+            border-color: darken($brand-primary, 15%);
+        }
+    }
 }
 
 // .big-heading

@@ -208,7 +208,8 @@ $(function() {
 // index hero slider
 $('.site-header__slogan .featured-slider').bxSlider({
     controls: 0,
-    auto: 1
+    auto: 1,
+    pause: 10000
 });
 
 /*  ===

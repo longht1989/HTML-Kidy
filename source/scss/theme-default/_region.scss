@@ -84,3 +84,27 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+
+.box {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 5px;
+    &__header {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $brand-primary;
+        margin-bottom: 15px;
+        a,
+        span {
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            color: $brand-primary;
+        }
+    }
+    &+.box {
+        margin-top: 20px;
+    }
+}

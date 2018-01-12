@@ -136,6 +136,7 @@
                         <li><a href="#block10">Danh sách giáo viên</a></li>
                         <li><a href="#block07">Các chi nhánh khác:</a></li>
                         <li><a href="#block08">Tiện ích</a></li>
+                        <li><a href="#block11">Danh sách các lớp</a></li>
                     </ul>
                     <!-- change avatar -->
                     <div class="edit__wrap">
@@ -778,7 +779,7 @@
                                             <h3>Tên giáo viên</h3>
                                         </div>
                                         <div class="edit__block-content">
-                                            <input type="text" id="trainer-01_name" class="form-control" placeholder="Hoàng Nguyễn Khánh Trang">
+                                            <input type="text" id="trainer-01_name" class="form-control is-filled" placeholder="Hoàng Nguyễn Khánh Trang">
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-6">
@@ -786,7 +787,7 @@
                                                     <h3>Chuyên môn</h3>
                                                 </div>
                                                 <div class="edit__block-content">
-                                                    <input type="text" id="trainer-01_title" class="form-control" placeholder="Giáo viên Montessori">
+                                                    <input type="text" id="trainer-01_title" class="form-control is-filled" placeholder="Giáo viên Montessori">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-6">
@@ -812,10 +813,42 @@
                                             </div>
                                         </div>
                                         <div class="edit__block-hdr">
+                                            <h3>Đường dẫn trang cá nhân (trên Kidy)</h3>
+                                        </div>
+                                        <div class="edit__block-content">
+                                            <input type="text" id="trainer-01_title" class="form-control is-filled" placeholder="https://kidy.vn/account/hoangnguyenkhanhtrang">
+                                        </div>
+                                        <div class="edit__block-hdr">
                                             <h3>Mô tả ngắn</h3>
                                         </div>
                                         <div class="edit__block-content">
-                                            <input type="text" id="trainer-01_title" class="form-control" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                            <input type="text" id="trainer-01_title" class="form-control is-filled" placeholder="Quamvis horrent invitat eadem dicta audiam praeceptrice deserere ignota intemperantes, dissidens legam.">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="edit__block-hdr">
+                                                    <h3>Phân công giảng dạy lớp</h3>
+                                                </div>
+                                                <div class="edit__block-content">
+                                                    <select name="" id="" class="form-control is-filled">
+                                                        <option value="-Chọn lớp phân công-">-Chọn lớp phân công-</option>
+                                                        <option value="Lớp lá xanh" selected="">Lớp lá xanh</option>
+                                                        <option value="Lớp chồi non">Lớp chồi non</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <div class="edit__block-hdr">
+                                                    <h3>Chức vụ đảm nhiệm lớp</h3>
+                                                </div>
+                                                <div class="edit__block-content">
+                                                    <select name="" id="" class="form-control is-filled">
+                                                        <option value="-Chọn lớp phân công-">-Chọn chức vụ đảm nhiệm trong lớp-</option>
+                                                        <option value="Cô chủ nhiệm" selected="">Cô chủ nhiệm</option>
+                                                        <option value="Cô trợ giảng">Cô trợ giảng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -920,6 +953,33 @@
                         </div>
                         <!-- block -->
                     </div>
+                    <!-- Danh sách các lớp học -->
+                    <div class="edit__wrap" id="block11">
+                        <h2 class="edit__wrap-title">Danh sách các lớp học</h2>
+                        <div class="edit__block">
+                            <div class="edit__block-hdr">
+                                <h3 title="Thông tin bắt buộc">Các lớp học nhà trường quản lý</h3>
+                            </div>
+                            <div class="edit__block-content">
+                                <input type="txt" class="form-control is-filled" placeholder="Lớp chồi non">
+                            </div>
+                        </div>
+                        <div class="edit__block">
+                            <div class="edit__block-content">
+                                <input type="txt" class="form-control is-filled" placeholder="Lớp lá xanh">
+                            </div>
+                        </div>
+                        <div class="edit__block">
+                            <div class="edit__block-content">
+                                <input type="txt" class="form-control" placeholder="Nhập tên lớp mới ...">
+                            </div>
+                        </div>
+                        <!-- submit block -->
+                        <div class="edit__submit text-right">
+                            <button class="pull-left btn btn-info"><span class="fa fa-plus"></span> Thêm lớp mới</button>
+                            <button class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -966,7 +1026,7 @@
         </div>
     </footer>
     <!-- JS Global Compulsory -->
-    <script src=" ../Jscripts/custom.js "></script>
+    <script src=" ../Jscripts/custom.js"></script>
     <!-- Js Dev plugin -->
     <!--[if lt IE 9]>
         <script src="Jscripts/vendor/respond.js "></script>
