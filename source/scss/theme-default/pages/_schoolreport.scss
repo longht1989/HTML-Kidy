@@ -187,6 +187,12 @@
                 margin-left: 10px;
             }
         }
+        .btn-border {
+            &.is-active {
+                background: #e6e6e6;
+                border-color: #e0e0e0;
+            }
+        }
     }
     &-wrap {
         &~.box__advance {
@@ -218,6 +224,154 @@
             padding-top: 15px;
             margin-top: 10px;
             border-top: 1px solid #eee;
+        }
+    }
+}
+
+.class-album {
+    .thumb {
+        margin-bottom: 10px;
+    }
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .meta {
+        font-size: 12px;
+        color: #999;
+    }
+    &+.class-album {
+        margin-top: 15px;
+    }
+}
+
+
+.daily-activity {
+    .time {
+        color: white;
+        border-radius: 15px;
+        background: $brand-info;
+        padding: 5px 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .modal-header {
+        .time {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.daily-note {
+    &__listing {
+        &>li {
+            @include clearfix;
+            &+li {
+                margin-top: 15px;
+            }
+        }
+        .kid__avatar {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+            float: left;
+        }
+        .teacher {
+            text-align: left;
+            label {
+                color: #2CA4A2;
+            }
+        }
+        .parent {
+            overflow: hidden;
+            margin-bottom: 5px;
+            label {
+                color: $brand-info;
+            }
+        }
+        label {
+            font-weight: normal;
+        }
+    }
+}
+
+.mini-box {
+    @include clearfix;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: linear-gradient(-134deg, #875792 0%, #075185 100%);
+    padding: 15px 10px;
+    color: white;
+    &__title {
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        time {
+            text-transform: none;
+            color: $brand-info;
+            font-weight: bold;
+        }
+    }
+    &__content {
+        &.has-table {
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-bottom: -15px;
+        }
+    }
+    .action {
+        .btn {
+            width: 100%;
+        }
+        .modal {
+            color: #333;
+            .btn {
+                width: initial;
+            }
+        }
+    }
+    .calendar__note {
+        li {
+            font-style: normal;
+        }
+        &+.action {
+            margin-top: 10px;
+        }
+    }
+    .btn-danger {
+        background-color: #2CA4A2;
+    }
+    .table {
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 0;
+        &>thead {
+            &>tr {
+                &>th {
+                    color: $brand-info;
+                    background: rgba(0, 0, 0, .2);
+                    border-bottom: 1px solid #4377A2;
+                    border-left: 1px solid #4377A2;
+                    &:first-child {
+                        border-left: none;
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        &>tbody {
+            &>tr {
+                >td {
+                    border-top: 1px solid #4377A2;
+                    border-left: 1px solid #4377A2;
+                    &:first-child {
+                        border-left: none;
+                    }
+                }
+            }
         }
     }
 }

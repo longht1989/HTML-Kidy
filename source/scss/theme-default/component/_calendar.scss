@@ -1,0 +1,187 @@
+/* Calendar style */
+
+.calendar {
+    &__bar {
+        margin-bottom: 15px;
+        @include clearfix;
+    }
+    &__month {
+        float: left;
+        font-size: 16px;
+    }
+    &__navi {
+        float: right;
+        a {
+            font-size: 22px;
+            background-color: #F7F8FC;
+            color: #DBDDE6;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            line-height: 22px;
+            border-radius: 3px;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.2s linear;
+            margin-left: 4px;
+            &:hover {
+                background: #eee;
+                color: #bbb;
+            }
+        }
+    }
+    &__note {
+        margin-top: 10px;
+        li {
+            padding-left: 10px;
+            position: relative;
+            font-size: 12px;
+            font-style: italic;
+            &+li {
+                margin-top: 8px;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                background: #D8D8D8;
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+            &.parent {
+
+                b {
+                    color: #F9A83C;
+                }
+                &::before {
+                    background: #F9A83C;
+                }
+            }
+            &.teacher {
+                text-align: left;
+                b {
+                    color: #2CA4A2;
+                }
+                &::before {
+                    background: #2CA4A2;
+                }
+            }
+        }
+    }
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+    li {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+    }
+    .sunday {
+        color: $brand-success;
+    }
+}
+
+.days {
+    padding: 10px 0;
+    background: #f0f0f0;
+    margin: 0;
+    li {
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 12px;
+        color: #7C86A2;
+        cursor: pointer;
+        position: relative;
+        span {
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            transition: all 0.1s linear;
+        }
+        &:hover {
+            span {
+                // background: white;
+                border-color: #7C86A2;
+            }
+            .today {
+                background: #165287;
+                border-color: darken(#165287, 10%);
+            }
+        }
+        .today {
+            background: #165287;
+            color: white;
+        }
+    }
+    .sunday {
+        color: $brand-success;
+    }
+    .other-month {
+        color: #bbb;
+    }
+    &__note {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        height: 6px;
+        margin-top: 4px;
+        font-size: 0;
+        .school,
+        .parent,
+        .teacher {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #D8D8D8;
+            margin: 0 1px;
+            display: inline-block;
+        }
+        .parent {
+            background: #2CA4A2;
+        }
+        .teacher {
+            background: #F9A83C;
+        }
+    }
+}
+
+// Add media queries for smaller screens
+@media screen and (max-width:720px) {
+    .weekdays li,
+    .days li {
+        width: 13.1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li,
+    .days li {
+        width: 12.5%;
+    }
+    .days li .active {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li,
+    .days li {
+        width: 12.2%;
+    }
+}
