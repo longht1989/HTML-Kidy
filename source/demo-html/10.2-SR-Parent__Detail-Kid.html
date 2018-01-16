@@ -142,7 +142,12 @@
                         <div class="box__header"><span>Thời khóa biểu</span></div>
                         <div class="box__content">
                             <div class="daily-activity">
-                                <div class="time">Thứ <b>5</b> ngày <b>12/01/2017</b></div>
+                                <div><a class="time" id="show-calendar" href="#calendar-wrap">Thứ <b>5</b> ngày <b>12/01/2017</b></a></div>
+                                <script type="text/javascript">
+                                $('#show-calendar').click(function() {
+                                    $('.calendar-wrap').slideDown();
+                                });
+                                </script>
                                 <!-- notes -->
                                 <div class="mini-box">
                                     <h3 class="mini-box__title">Ghi chú</h3>
@@ -274,106 +279,134 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id='calendar' class="calendar">
-                                <div class="calendar__bar">
-                                    <div class="calendar__month">
-                                        <span class="month">Tháng 1</span>
-                                        <span class="year">2017</span>
+                            <div class="calendar-wrap" id="calendar-wrap" style="display:none;">
+                                <div id='calendar' class="calendar">
+                                    <div class="calendar__bar">
+                                        <div class="calendar__month">
+                                            <span class="month">Tháng 1</span>
+                                            <span class="year">2017</span>
+                                        </div>
+                                        <div class="calendar__navi">
+                                            <a class="prev fa fa-angle-left"></a>
+                                            <a class="next fa fa-angle-right"></a>
+                                        </div>
                                     </div>
-                                    <div class="calendar__navi">
-                                        <a class="prev fa fa-angle-left"></a>
-                                        <a class="next fa fa-angle-right"></a>
+                                    <ul class="weekdays">
+                                        <li>Mo</li>
+                                        <li>Tu</li>
+                                        <li>We</li>
+                                        <li>Th</li>
+                                        <li>Fr</li>
+                                        <li>Sa</li>
+                                        <li class="sunday">Su</li>
+                                    </ul>
+                                    <ul class="days">
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>1</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>2</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>3</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>4</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>5</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>6</span></li>
+                                        <li class="sunday" data-toggle="modal" data-target="#ModalNote-otherday"><span>7</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span>8</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                            </div>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span>9</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                                <div class="parent"></div>
+                                            </div>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span>10</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                                <div class="parent"></div>
+                                                <div class="teacher"></div>
+                                            </div>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span>11</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                                <div class="parent"></div>
+                                            </div>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span class="today">12</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                                <div class="teacher"></div>
+                                            </div>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday">
+                                            <span>13</span>
+                                            <div class="days__note">
+                                                <div class="school"></div>
+                                                <div class="parent"></div>
+                                                <div class="teacher"></div>
+                                            </div>
+                                        </li>
+                                        <li class="sunday"><span data-toggle="modal" data-target="#ModalNote-otherday">14</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>15</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>16</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>17</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>18</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>19</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>20</span></li>
+                                        <li class="sunday"><span data-toggle="modal" data-target="#ModalNote-otherday">21</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>22</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>23</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>24</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>25</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>26</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>27</span></li>
+                                        <li class="sunday"><span data-toggle="modal" data-target="#ModalNote-otherday">28</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>29</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>30</span></li>
+                                        <li data-toggle="modal" data-target="#ModalNote-otherday"><span>31</span></li>
+                                        <li class="other-month"><span>1</span></li>
+                                        <li class="other-month"><span>2</span></li>
+                                        <li class="other-month"><span>3</span></li>
+                                        <li class="other-month"><span>4</span></li>
+                                    </ul>
+                                </div>
+                                <ul class="calendar__note">
+                                    <li class="schedule">Thời khóa biểu & thực đơn</li>
+                                    <li class="teacher">Ghi chú của giáo viên</li>
+                                    <li class="parent">Ghi chú của phụ huynh</li>
+                                </ul>
+                                <!-- modal note other day-->
+                                <div id="ModalNote-otherday" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                    <div class="modal-dialog box" role="document">
+                                        <div class="modal-header">
+                                            <h3 class="text-center">Thêm ghi chú</h3>
+                                        </div>
+                                        <div class="modal-content">
+                                            <div class="time">Thứ <b>5</b> ngày <b>12/01/2017</b></div>
+                                            <div class="mini-box">
+                                                <h3 class="mini-box__title">Ghi chú</h3>
+                                                <div class="mini-box__content">
+                                                    <ul class="calendar__note">
+                                                        <li class="parent"><b>Phụ huynh: </b>Phụ huynh: Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</li>
+                                                        <li class="teacher"><b>Giáo viên: </b>Con hôm nay đau bụng nên không kịp đi vệ sinh, ị đùn ra lớp. Bố mẹ về nhớ cho con uống thuốc.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <label for="daynote">Nội dung ghi chú</label>
+                                            <textarea id="daynote" placeholder="Nội dung ghi chú" class="form-control" rows="5"></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                            <button type="button" class="btn btn-primary">Gửi ghi chú</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <ul class="weekdays">
-                                    <li>Mo</li>
-                                    <li>Tu</li>
-                                    <li>We</li>
-                                    <li>Th</li>
-                                    <li>Fr</li>
-                                    <li>Sa</li>
-                                    <li class="sunday">Su</li>
-                                </ul>
-                                <ul class="days">
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>1</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>2</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>3</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>4</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>5</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>6</span></li>
-                                    <li class="sunday" data-toggle="modal" data-target="#ModalNote"><span>7</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span>8</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                        </div>
-                                    </li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span>9</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                            <div class="parent"></div>
-                                        </div>
-                                    </li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span>10</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                            <div class="parent"></div>
-                                            <div class="teacher"></div>
-                                        </div>
-                                    </li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span>11</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                            <div class="parent"></div>
-                                        </div>
-                                    </li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span class="today">12</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                            <div class="teacher"></div>
-                                        </div>
-                                    </li>
-                                    <li data-toggle="modal" data-target="#ModalNote">
-                                        <span>13</span>
-                                        <div class="days__note">
-                                            <div class="school"></div>
-                                            <div class="parent"></div>
-                                            <div class="teacher"></div>
-                                        </div>
-                                    </li>
-                                    <li class="sunday"><span data-toggle="modal" data-target="#ModalNote">14</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>15</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>16</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>17</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>18</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>19</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>20</span></li>
-                                    <li class="sunday"><span data-toggle="modal" data-target="#ModalNote">21</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>22</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>23</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>24</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>25</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>26</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>27</span></li>
-                                    <li class="sunday"><span data-toggle="modal" data-target="#ModalNote">28</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>29</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>30</span></li>
-                                    <li data-toggle="modal" data-target="#ModalNote"><span>31</span></li>
-                                    <li class="other-month"><span>1</span></li>
-                                    <li class="other-month"><span>2</span></li>
-                                    <li class="other-month"><span>3</span></li>
-                                    <li class="other-month"><span>4</span></li>
-                                </ul>
                             </div>
-                            <ul class="calendar__note">
-                                <li class="schedule">Thời khóa biểu & thực đơn</li>
-                                <li class="teacher">Ghi chú của giáo viên</li>
-                                <li class="parent">Ghi chú của phụ huynh</li>
-                            </ul>
                         </div>
                     </div>
                     <!-- Nhận xét tuần -->
