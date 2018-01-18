@@ -147,6 +147,11 @@
                                 $('#show-calendar').click(function() {
                                     $('.calendar-wrap').slideDown();
                                 });
+                                $(function() {
+                                    $('.modal div[data-dismiss="modal"]').click(function() {
+                                        $('body').removeAttr('style');
+                                    });
+                                });
                                 </script>
                                 <!-- notes -->
                                 <div class="mini-box">
@@ -156,13 +161,20 @@
                                             <div class="row">
                                                 <div class="col-xs-6"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
                                                 <!-- modal note-->
-                                                <div id="ModalNote" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                                <div id="ModalNote" class="modal fade modal-note" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                                     <div class="modal-dialog box" role="document">
                                                         <div class="modal-header">
                                                             <h3 class="text-center">Thêm ghi chú</h3>
                                                         </div>
                                                         <div class="modal-content">
-                                                            <div class="time">Thứ <b>5</b> ngày <b>12/01/2017</b></div>
+                                                            <div class="time" id="show-calendar" href="#calendar-wrap">Thứ <b>5</b> ngày <b>12/01/2017</b></div>
+                                                            <div class="action">
+                                                                <div class="row">
+                                                                    <div class="col-xs-6"><a class="btn btn-border" disabled>Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
+                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-info" data-toggle="modal" data-target="#ModalDayOff">Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
                                                             <div>
                                                                 <label for="daynote">Nội dung ghi chú</label>
                                                                 <textarea id="daynote" placeholder="Nội dung ghi chú" class="form-control" rows="5"></textarea>
@@ -182,13 +194,13 @@
                                                             <h3 class="text-center">Xin nghỉ học</h3>
                                                         </div>
                                                         <div class="modal-content">
-                                                            <div class="general-comment__tool">
+                                                            <div class="action">
                                                                 <div class="row">
-                                                                    <div class="col-xs-12 col-sm-2"><a class="btn btn-border is-active">Hôm nay</a></div>
-                                                                    <div class="col-xs-12 col-sm-2"><a class="btn btn-border">Ngày mai</a></div>
-                                                                    <div class="col-xs-12 col-sm-3"></div>
+                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
+                                                                    <div class="col-xs-6"><a class="btn btn-border" disabled>Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
                                                                 </div>
                                                             </div>
+                                                            <br>
                                                             <div class="general-comment__tool">
                                                                 <span>Từ ngày</span>
                                                                 <a class="btn btn-default">12/01/2017</a>
@@ -202,7 +214,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                                                            <button type="button" class="btn btn-primary">Gửi ghi chú</button>
+                                                            <button type="button" class="btn btn-primary">Gửi đơn</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -524,31 +536,31 @@
                     </div>
                     <!-- box album listing -->
                     <div class="box">
-                        <div class="box__header"><span>Album ảnh của bé</span></div>
+                        <div class="box__header"><span>Album ảnh</span></div>
                         <div class="box__content">
                             <div class="class-album">
                                 <figure class="thumb">
-                                    <a href="#"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=100" alt=""></a>
+                                    <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=100" alt=""></a>
                                 </figure>
-                                <h2 class="title"><a href="#">Bé sáng tạo nghệ thuật </a></h2>
+                                <h2 class="title"><a href="10.5-SR-Album.html">Bé sáng tạo nghệ thuật </a></h2>
                                 <p class="meta">
                                     <time datetime="2011-01-12">12/01/2017</time>
                                 </p>
                             </div>
                             <div class="class-album">
                                 <figure class="thumb">
-                                    <a href="#"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=101" alt=""></a>
+                                    <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=101" alt=""></a>
                                 </figure>
-                                <h2 class="title"><a href="#">Trải nghiệm làm bánh trung thu</a></h2>
+                                <h2 class="title"><a href="10.5-SR-Album.html">Trải nghiệm làm bánh trung thu</a></h2>
                                 <p class="meta">
                                     <time datetime="2011-01-12">12/01/2017</time>
                                 </p>
                             </div>
                             <div class="class-album">
                                 <figure class="thumb">
-                                    <a href="#"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=102" alt=""></a>
+                                    <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=102" alt=""></a>
                                 </figure>
-                                <h2 class="title"><a href="#">Hoạt động thể chất</a></h2>
+                                <h2 class="title"><a href="10.5-SR-Album.html">Hoạt động thể chất</a></h2>
                                 <p class="meta">
                                     <time datetime="2011-01-12">12/01/2017</time>
                                 </p>
@@ -600,7 +612,7 @@
         </div>
     </footer>
     <!-- JS Global Compulsory -->
-    <!-- <script src=" ../Jscripts/custom.js"></script> -->
+    <script src=" ../Jscripts/custom.js"></script>
     <!-- Js Dev plugin -->
     <!--[if lt IE 9]>
         <script src="Jscripts/vendor/respond.js "></script>

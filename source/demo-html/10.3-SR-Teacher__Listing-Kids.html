@@ -427,6 +427,68 @@
                             </script>
                         </div>
                     </div>
+                    <!-- media box -->
+                    <div class="box">
+                        <div class="box__header"><span>Album ảnh</span></div>
+                        <div class="box__content">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="class-album">
+                                        <figure class="thumb">
+                                            <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=100" alt=""></a>
+                                        </figure>
+                                        <h2 class="title"><a href="10.5-SR-Album.html">Bé sáng tạo nghệ thuật</a></h2>
+                                        <p class="meta">
+                                            <time datetime="2011-01-12">12/01/2017</time>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="class-album">
+                                        <figure class="thumb">
+                                            <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=101" alt=""></a>
+                                        </figure>
+                                        <h2 class="title"><a href="10.5-SR-Album.html">Trải nghiệm làm bánh trung thu</a></h2>
+                                        <p class="meta">
+                                            <time datetime="2011-01-12">06/01/2017</time>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="class-album">
+                                        <figure class="thumb">
+                                            <a href="10.5-SR-Album.html"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=102" alt=""></a>
+                                        </figure>
+                                        <h2 class="title"><a href="10.5-SR-Album.html">Hoạt động thể chất</a></h2>
+                                        <p class="meta">
+                                            <time datetime="2011-01-12">01/01/2017</time>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <a class="btn btn-primary" data-toggle="modal" data-target="#NewAlbum"><span class="fa fa-plus"></span> Tạo album mới</a>
+                                <!-- Modal create new album-->
+                                <div class="modal fade newalbum" id="NewAlbum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title text-center" id="myModalLabel">Tạo album mới</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input type="text" class="form-control" placeholder="Nhập tên album mới">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
                     <div class="teacher box">
@@ -494,7 +556,6 @@
     </footer>
     <!-- JS Global Compulsory -->
     <script src=" ../Jscripts/custom.js "></script>
-    <script src=" ../fullcalendar/fullcalendar.min.js"></script>
     <!-- Js Dev plugin -->
     <!--[if lt IE 9]>
         <script src="Jscripts/vendor/respond.js "></script>
