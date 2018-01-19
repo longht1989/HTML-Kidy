@@ -300,6 +300,15 @@
             margin-right: 10px;
             float: left;
         }
+        .kid__note {
+            overflow: hidden;
+        }
+        .parent,
+        .teacher {
+            label {
+                margin-bottom: 0;
+            }
+        }
         .teacher {
             text-align: left;
             label {
