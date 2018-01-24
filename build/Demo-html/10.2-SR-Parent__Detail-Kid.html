@@ -142,7 +142,7 @@
                         <div class="box__header"><span>Thời khóa biểu</span></div>
                         <div class="box__content">
                             <div class="daily-activity">
-                                <div><a class="time" id="show-calendar" href="#calendar-wrap">Thứ <b>5</b> ngày <b>12/01/2017</b></a></div>
+                                <div class="time"><a class="btn btn-info" id="show-calendar" href="#calendar-wrap"><span class="fa fa-calendar"></span>Thứ <b>5</b> ngày <b>12/01/2017</b></a></div>
                                 <script type="text/javascript">
                                 $('#show-calendar').click(function() {
                                     $('.calendar-wrap').slideDown();
@@ -159,7 +159,7 @@
                                     <div class="mini-box__content">
                                         <div class="action">
                                             <div class="row">
-                                                <div class="col-xs-6"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
+                                                <div class="col-xs-offset-1 col-xs-5"><a class="btn btn-primary" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
                                                 <!-- modal note-->
                                                 <div id="ModalNote" class="modal fade modal-note" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                                     <div class="modal-dialog box" role="document">
@@ -167,11 +167,11 @@
                                                             <h3 class="text-center">Thêm ghi chú</h3>
                                                         </div>
                                                         <div class="modal-content">
-                                                            <div class="time" id="show-calendar" href="#calendar-wrap">Thứ <b>5</b> ngày <b>12/01/2017</b></div>
+                                                            <div class="time"><span>Thứ <b>5</b> ngày <b>12/01/2017</b></span></div>
                                                             <div class="action">
                                                                 <div class="row">
                                                                     <div class="col-xs-6"><a class="btn btn-border" disabled>Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
-                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-info" data-toggle="modal" data-target="#ModalDayOff">Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
+                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalDayOff">Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
                                                                 </div>
                                                             </div>
                                                             <br>
@@ -186,7 +186,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-6"><a class="btn btn-info" data-toggle="modal" data-target="#ModalDayOff">Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
+                                                <div class="col-xs-5"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalDayOff">Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
                                                 <!-- modal day off -->
                                                 <div id="ModalDayOff" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                                                     <div class="modal-dialog box" role="document">
@@ -196,7 +196,7 @@
                                                         <div class="modal-content">
                                                             <div class="action">
                                                                 <div class="row">
-                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-danger" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
+                                                                    <div class="col-xs-6" data-dismiss="modal"><a class="btn btn-primary" data-toggle="modal" data-target="#ModalNote">Thêm ghi chú <span class="fa fa-plus-circle"></span></a></div>
                                                                     <div class="col-xs-6"><a class="btn btn-border" disabled>Xin nghỉ học <span class="fa fa-plus-circle"></span></a></div>
                                                                 </div>
                                                             </div>
@@ -214,7 +214,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-                                                            <button type="button" class="btn btn-primary">Gửi đơn</button>
+                                                            <button type="button" class="btn btn-danger">Gửi đơn</button>
                                                         </div>
                                                     </div>
                                                 </div>

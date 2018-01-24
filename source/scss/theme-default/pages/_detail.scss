@@ -213,6 +213,8 @@
         position: relative;
         padding-bottom: 40px;
         @include transition(max-height, 1, ease);
+        font-size: 16px;
+        line-height: 1.4em;
         &.show,
         &.is-full {
             padding-bottom: 0;

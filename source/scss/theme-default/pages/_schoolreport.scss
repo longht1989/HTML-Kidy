@@ -271,17 +271,56 @@
 
 .daily-activity {
     .time {
-        color: white;
-        border-radius: 15px;
-        background: $brand-info;
-        padding: 5px 10px;
+        // color: white;
+        // border-radius: 15px;
+        // background: $brand-info;
+        // padding: 5px 10px;
         text-align: center;
         margin-bottom: 10px;
         display: block;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30%;
+            height: 1px;
+            background: white;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            background: #eee;
+            height: 1px;
+            width: 100%;
+            z-index: 0;
+        }
+        .btn,
+        &>span {
+            z-index: 2;
+            position: relative;
+        }
+        span {
+            background: white;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
     }
     .modal-header {
         .time {
             margin-bottom: 0;
+            &::before,
+            &::after {
+                display: none;
+            }
         }
     }
 }
