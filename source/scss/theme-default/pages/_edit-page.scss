@@ -28,6 +28,18 @@
                 min-height: 96px;
             }
         }
+        .story-left {
+            &+.story-left {
+                margin-top: 10px;
+                padding-top: 15px;
+                border-top: 1px solid #eee;
+            }
+            .thumb {
+                border-radius: 5px;
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+        }
     }
     &__wrap {
         border-radius: 5px;
