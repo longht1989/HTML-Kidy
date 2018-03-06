@@ -47,6 +47,48 @@
         background: white;
         margin-bottom: 30px;
         @include clearfix;
+        .table {
+            .table-label {
+                width: 20%;
+            }
+            .table-content {
+                width: 70%;
+            }
+            .table-action {
+                width: 10%;
+                text-align: right;
+                vertical-align: middle;
+                a {
+                    cursor: pointer;
+                }
+            }
+            .form-control {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                transition: all 0.2s linear;
+                border-radius: 0;
+                border-bottom: 1px solid transparent;
+                background: transparent;
+                &:hover {
+                    border-bottom-color: #eee;
+                }
+                &:focus {
+                    border-bottom-color: #d0d0d0;
+                }
+            }
+            textarea.form-control {
+                line-height: 34px;
+            }
+            >tbody>tr>td,
+            >tbody>tr>th,
+            >tfoot>tr>td,
+            >tfoot>tr>th,
+            >thead>tr>td,
+            >thead>tr>th {
+                border-top: none;
+            }
+        }
     }
     &__wrap-title {
         font-size: 22px;
