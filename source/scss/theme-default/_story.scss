@@ -159,6 +159,32 @@
             box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .16);
         }
     }
+    &__badge {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &.has-sale {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            width: 64px;
+            height: 64px;
+            background: url(../img/badge.png) left top no-repeat;
+            background-size: 100%;
+            z-index: 1;
+        }
+    }
     &__create {
         // color: lighten($brand-primary, 10%);
         font-size: 20px;

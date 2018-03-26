@@ -28,6 +28,16 @@
                 right: -10px;
                 display: none;
             }
+            a {
+                font-size: 12px;
+                cursor: pointer;
+                color: #555;
+                margin-top: 10px;
+                display: block;
+                &:hover {
+                    color: $brand-success;
+                }
+            }
         }
         .parent__name {
             margin-top: 5px;

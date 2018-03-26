@@ -1,0 +1,131 @@
+/* service page style */
+
+.service {
+    &-page {
+        padding: 0;
+        h2 {
+            font-size: 27px;
+            margin-bottom: 40px;
+            b {
+                font-size: 1.2em;
+            }
+            @include breakpoint (md) {
+                margin-bottom: 48px;
+                font-size: 46px;
+            }
+        }
+        h4 {
+            font-size: 22px;
+            margin-bottom: 24px;
+            @include breakpoint (md) {
+                font-size: 24px;
+            }
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+    }
+    &-zone {
+        padding: 30px 0;
+        @include breakpoint(md) {
+            padding: 80px 0;
+        }
+        &.school-report {
+            background-image: linear-gradient(136deg, #FBA32D 0%, #2CA4A8 91%);
+            color: white;
+            img {
+                @include breakpoint(xs) {
+                    max-width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        &.training {
+            text-align: center;
+            background: url(../img/service-training.png) center bottom no-repeat;
+            background-size: 100%;
+            @include breakpoint(sm) {
+                background-size: 50%;
+            }
+            p {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &.suggestion {
+            background-color: $brand-info;
+            color: white;
+            img {
+                max-width: 66%;
+                margin-bottom: 16px;
+                @include breakpoint(sm) {
+                    max-width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &.branding {
+            background: url(../img/service-marketing-mobile.png) left top no-repeat;
+            background-size: cover;
+            color: white;
+            @include breakpoint(sm){
+                background-image: url(../img/service-marketing.png);
+            }
+        }
+        &.marketing {
+            text-align: center;
+            .marketing__icon {
+                margin-bottom: 16px;
+                img {
+                    max-width: 80%;
+                }
+            }
+            .col-xs-12 {
+                margin-bottom: 24px;
+                @include breakpoint(sm) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.membership {
+    @include breakpoint(sm) {
+        display: table;
+        width: 100%;
+    }
+    .membership__col {
+        padding: 30px 0;
+        text-align: center;
+        color: white;
+        h2 {
+            b {
+                font-size: 1.2em;
+            }
+        }
+        .btn-border {
+            color: white;
+            border-color: white;
+            margin-bottom: 24px;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+        @include breakpoint(sm) {
+            padding: 80px 0;
+            width: 50%;
+            display: table-cell;
+        }
+        &.standard {
+            background: #FBA32D;
+        }
+        &.premium {
+            background: #2C3637;
+        }
+    }
+}

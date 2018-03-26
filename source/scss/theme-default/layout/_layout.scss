@@ -24,6 +24,11 @@
     &--featured {
         @include clearfix;
         .item--mask {
+            .item__thumb {
+                img {
+                    width: 100%;
+                }
+            }
             .item__title {
                 font-size: 22px;
             }

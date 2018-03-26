@@ -104,6 +104,18 @@
             background-color: #fff;
         }
     }
+    @include Element(content) {
+        .alert {
+            background: lighten($brand-info, 35%);
+            border: 1px dashed #aaa;
+            padding: 10px;
+            line-height: 20px;
+            b {
+                font-size: 16px;
+                color: $brand-success;
+            }
+        }
+    }
     @include Element(content-wrap) {
         @include clearfix();
         margin-bottom: 20px;
@@ -504,6 +516,34 @@
         margin-bottom: 20px;
         background: $brand-primary;
         @include clearfix;
+        @include breakpoint(320px, 1024px) {
+            position: relative;
+            &::after {
+                content: '';
+                font-family: "fontawesome";
+                color: #555;
+                line-height: 35px;
+                text-align: center;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -10px;
+                bottom: 0;
+                width: 5%;
+                background: #f0f0f0;
+            }
+            nav {
+                overflow-x: auto;
+            }
+            ul {
+                min-width: 768px;
+                li {
+                    &:last-child {
+                        padding-right: 25px;
+                    }
+                }
+            }
+        }
         li {
             float: left;
             @include font-size(14, 35);

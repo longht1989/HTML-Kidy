@@ -39,6 +39,11 @@
                 overflow: hidden;
                 margin-bottom: 0;
             }
+            .title,
+            .meta,
+            .summary {
+                overflow: hidden;
+            }
         }
     }
     &__wrap {
@@ -55,11 +60,12 @@
                 width: 70%;
             }
             .table-action {
-                width: 10%;
+                width: 15%;
                 text-align: right;
                 vertical-align: middle;
                 a {
                     cursor: pointer;
+                    margin-left: 15px;
                 }
             }
             .form-control {

@@ -78,6 +78,26 @@
             }
         }
     }
+    &--small {
+        .zone__header {
+            .fa {
+                font-size: 36px;
+            }
+        }
+        .item {
+            &--horizontal {
+                .item__info {
+                    width: 75%;
+                    padding: 10px 15px;
+                }
+            }
+            &__meta {
+                font-weight: bold;
+                margin-top: 5px;
+                color: #555;
+            }
+        }
+    }
 }
 
 .qc {
