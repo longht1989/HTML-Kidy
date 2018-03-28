@@ -4,14 +4,12 @@
     &-page {
         padding: 0;
         h2 {
-            font-size: 27px;
+            font-size: 30px;
             margin-bottom: 40px;
-            b {
-                font-size: 1.2em;
-            }
+            font-weight: bold;
             @include breakpoint (md) {
                 margin-bottom: 48px;
-                font-size: 46px;
+                font-size: 40px;
             }
         }
         h4 {
@@ -41,6 +39,15 @@
                     margin-right: auto;
                 }
             }
+            .btn-border {
+                color: white;
+                border-color: white;
+                margin-bottom: 24px;
+                &:hover {
+                    background: white;
+                    color: black;
+                }
+            }
         }
         &.training {
             text-align: center;
@@ -68,10 +75,10 @@
             }
         }
         &.branding {
-            background: url(../img/service-marketing-mobile.png) left top no-repeat;
+            background: url(../img/service-marketing-mobile.png) center center no-repeat;
             background-size: cover;
             color: white;
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 background-image: url(../img/service-marketing.png);
             }
         }
@@ -80,16 +87,92 @@
             .marketing__icon {
                 margin-bottom: 16px;
                 img {
-                    max-width: 80%;
+                    max-width: 100px;
+                    @include breakpoint(md) {
+                        max-width: 80%;
+                    }
                 }
             }
             .col-xs-12 {
-                margin-bottom: 24px;
+                margin-bottom: 48px;
                 @include breakpoint(sm) {
                     margin-bottom: 0;
                 }
             }
         }
+    }
+    &__cover {
+        padding: 48px 0;
+        background: url(../img/service_cover.png) center center no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        position: relative;
+        min-height: 400px;
+        @include breakpoint(sm) {
+            min-height: 540px;
+        }
+        .title {
+            font-size: 32px;
+            line-height: 1.3em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-weight: normal;
+            @include breakpoint(sm) {
+                font-size: 56px;
+            }
+        }
+        .container {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            @include breakpoint(xs) {
+                min-width: 280px;
+                max-width: 600px;
+            }
+        }
+    }
+    &__content {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background: white;
+        padding: 16px;
+        margin-top: 24px;
+        @include breakpoint(sm) {
+            padding: 24px 36px;
+        }
+        h2 {
+            margin-bottom: 16px;
+        }
+        &.is-full {
+            max-width: 100%;
+        }
+        .mini-list {
+            @include breakpoint(sm) {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        ul {
+            li {
+                position: relative;
+                .fa {
+                    margin-right: 8px;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    &__row {
+        padding: 64px 0;
+    }
+    &__image {
+        max-width: 50%;
+        @include center-block;
     }
 }
 

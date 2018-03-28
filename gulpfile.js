@@ -93,7 +93,7 @@ gulp.task('copyJs', function() {
 
 gulp.task('copyHtml', function() {
     gulp.src(paths.html_dev + '/**/*')
-        .pipe(gulp.dest(paths.html)).pipe(browserSync.stream({ once: true }));
+        .pipe(gulp.dest(paths.html));
 });
 
 gulp.task('copyFonts', function() {
@@ -103,7 +103,7 @@ gulp.task('copyFonts', function() {
 
 gulp.task('copyImg', function() {
     gulp.src(paths.img_dev + '/**/*')
-        .pipe(gulp.dest(paths.img)).pipe(browserSync.stream({ once: true }));
+        .pipe(gulp.dest(paths.img));
 });
 
 // copy all
@@ -129,6 +129,11 @@ gulp.task('default', ['copy', 'scripts', 'styles'],
         });
         gulp.watch(paths.js_dev + '/**/*.js', ['copyJs-UI', 'scripts']);
         gulp.watch(paths.scss_dev + '/**/*.scss', ['styles']);
-        gulp.watch(paths.html_dev + '/**/*.html', ['copyHtml']);
+        gulp.watch(paths.html_dev + '/**/*.html', function(obj) {
+            if (obj.type === 'changed') {
+                gulp.src(obj.path, { "base": paths.html_dev})
+                    .pipe(gulp.dest(paths.html));
+            }
+        }).on('change', browserSync.reload);
     }
 );
