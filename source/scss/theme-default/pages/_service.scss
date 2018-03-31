@@ -30,7 +30,8 @@
             padding: 80px 0;
         }
         &.school-report {
-            background-image: linear-gradient(136deg, #FBA32D 0%, #2CA4A8 91%);
+            // background-image: linear-gradient(136deg, #FBA32D 0%, #2CA4A8 91%);
+            background: #F9AE49;
             color: white;
             img {
                 @include breakpoint(xs) {
@@ -63,15 +64,11 @@
             }
         }
         &.suggestion {
-            background-color: $brand-info;
-            color: white;
-            img {
-                max-width: 66%;
-                margin-bottom: 16px;
-                @include breakpoint(sm) {
-                    max-width: 100%;
-                    margin-bottom: 0;
-                }
+            background: url(../img/service-suggest-mobile.png) right top no-repeat;
+            background-size: cover;
+            @include breakpoint(sm) {
+                background-image: url(../img/service-suggest.png);
+                padding: 160px 0;
             }
         }
         &.branding {
@@ -80,6 +77,7 @@
             color: white;
             @include breakpoint(sm) {
                 background-image: url(../img/service-marketing.png);
+                padding: 160px 0;
             }
         }
         &.marketing {
@@ -102,77 +100,178 @@
         }
     }
     &__cover {
-        padding: 48px 0;
-        background: url(../img/service_cover.png) center center no-repeat;
+        background: url(../img/service_detail_01.png) center center no-repeat;
         background-size: cover;
-        color: white;
-        text-align: center;
         position: relative;
-        min-height: 400px;
-        @include breakpoint(sm) {
-            min-height: 540px;
-        }
-        .title {
-            font-size: 32px;
-            line-height: 1.3em;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            font-weight: normal;
-            @include breakpoint(sm) {
-                font-size: 56px;
+        min-height: 360px;
+        .text {
+            background: url(../img/service_detail.png) left top no-repeat;
+            background-size: 100% 100%;
+            color: white;
+            position: absolute;
+            padding: 36px 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            p {
+                font-size: 20px;
+                max-width: 80%;
+                float: right;
             }
         }
-        .container {
-            transform: translate(-50%, -50%);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-            @include breakpoint(xs) {
-                min-width: 280px;
-                max-width: 600px;
+        @include breakpoint(sm) {
+            min-height: 722px;
+            .text {
+                text-align: right;
+                width: 65%;
+                padding: 80px 60px 0 40px;
+            }
+        }
+        @include breakpoint(md) {
+            .text {
+                text-align: right;
+                width: 45%;
+                padding: 120px 80px 0 90px;
             }
         }
     }
-    &__content {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+    &__area {
+        padding: 36px 0;
         background: white;
-        padding: 16px;
-        margin-top: 24px;
-        @include breakpoint(sm) {
-            padding: 24px 36px;
+        .box-content {
+            margin: 24px 0;
         }
-        h2 {
-            margin-bottom: 16px;
-        }
-        &.is-full {
-            max-width: 100%;
-        }
-        .mini-list {
-            @include breakpoint(sm) {
-                max-width: 80%;
-                margin-left: auto;
-                margin-right: auto;
+        .fa {
+            font-size: 48px;
+            color: $brand-primary;
+            margin: 0 auto 24px;
+            display: block;
+            text-align: center;
+            &+p {
+                overflow: hidden;
             }
         }
-        ul {
-            li {
-                position: relative;
-                .fa {
-                    margin-right: 8px;
-                    font-size: 1.2em;
+        @include breakpoint(sm) {
+            padding: 72px 0;
+            .box-content {
+                max-width: 80%;
+                margin: 36px auto;
+            }
+            .fa {
+                margin: 0 56px 0 0;
+                float: left;
+                min-width: 20%;
+                font-size: 72px;
+            }
+        }
+        &.featured {
+            color: white;
+            background-image: linear-gradient(0deg, #175785 1%, #715383 100%);
+            .bullet_listing {
+                margin-bottom: 24px;
+                @include breakpoint(sm) {
+                    max-width: 80%;
+                    float: right;
+                    text-align: right;
+                    margin-bottom: 0px;
+                }
+                li {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding-left: 32px;
+                    background: url(../img/service_bullet_dot.png) left top 6px no-repeat;
+                    background-size: 14px 14px;
+                    &+li {
+                        margin-top: 16px;
+                    }
+                    @include breakpoint(sm) {
+                        font-size: 20px;
+                        background: url(../img/service_bullet_yellow.png) right top 6px no-repeat;
+                        background-size: 67px 14px;
+                        padding-right: 85px;
+                        +li {
+                            margin-top: 36px;
+                        }
+                        $elements: 6;
+                        $default-margin: 24;
+                        @for $i from 2 to $elements {
+                            &:nth-child(#{$i}) {
+                                margin-right: ($default-margin*$i)+px;
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-    &__row {
-        padding: 64px 0;
-    }
-    &__image {
-        max-width: 50%;
-        @include center-block;
+        &.info {
+            background: #F9AE49;
+            color: white;
+            .bullet_listing {
+                margin-bottom: 24px;
+                @include breakpoint(sm) {
+                    float: right;
+                    text-align: right;
+                    margin-bottom: 0px;
+                }
+                li {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding-left: 32px;
+                    background: url(../img/service_bullet_dot_white.png) left top 6px no-repeat;
+                    background-size: 14px 14px;
+                    &+li {
+                        margin-top: 16px;
+                    }
+                    @include breakpoint(sm) {
+                        font-size: 20px;
+                        background: url(../img/service_bullet_white.png) right top 6px no-repeat;
+                        background-size: 67px 14px;
+                        padding-right: 85px;
+                        +li {
+                            margin-top: 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .bullet_listing_dot {
+            margin-bottom: 24px;
+            @include breakpoint(sm) {
+                text-align: right;
+                margin-bottom: 0px;
+            }
+            li {
+                font-size: 18px;
+                background: url(../img/service_bullet_dot.png) left top 8px no-repeat;
+                background-size: 14px 14px;
+                padding: 0 0 0 24px;
+                &+li {
+                    margin: 16px 0 0;
+                }
+                @include breakpoint(sm) {
+                    font-size: 20px;
+                    background: url(../img/service_bullet_dot.png) right top 8px no-repeat;
+                    background-size: 14px 14px;
+                    padding: 0 36px 0 0;
+                    margin-top: 88px;
+                    &+li {
+                        margin: 88px 0 0;
+                    }
+                }
+            }
+            &.right {
+                @include breakpoint(sm) {
+                    text-align: left;
+                }
+                li {
+                    @include breakpoint(sm) {
+                        background: url(../img/service_bullet_dot.png) left top 8px no-repeat;
+                        background-size: 14px 14px;
+                        padding: 0 0 0 36px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -208,7 +307,7 @@
             background: #FBA32D;
         }
         &.premium {
-            background: #2C3637;
+            background: #435772;
         }
     }
 }
