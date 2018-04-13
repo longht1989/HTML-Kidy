@@ -172,17 +172,17 @@
     }
     &.has-sale {
         position: relative;
-        &::before {
-            content: '';
-            display: block;
+        .item__promote {
             position: absolute;
             top: -20px;
             right: -10px;
             width: 64px;
             height: 64px;
-            background: url(../img/badge.png) left top no-repeat;
-            background-size: 100%;
             z-index: 1;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
     &__create {
