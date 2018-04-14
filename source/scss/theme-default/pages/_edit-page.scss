@@ -94,6 +94,16 @@
             >thead>tr>th {
                 border-top: none;
             }
+            &-fullweek {
+                margin-top: 20px;
+                display: none;
+                .weekday {
+                    td {
+                        background-color: #ddd;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
     &__wrap-title {
@@ -120,6 +130,12 @@
         .search-box__bar-wrap {}
         .search-box__input-bar {
             border-color: #ccc;
+        }
+        .view-week {
+            &.is-active {
+                background-color: #ddd;
+                border: 1px solid #ddd;
+            }
         }
     }
 }

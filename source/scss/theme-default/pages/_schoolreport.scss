@@ -30,8 +30,7 @@
             }
             a {
                 font-size: 12px;
-                cursor: pointer;
-                // color: #555;
+                cursor: pointer; // color: #555;
                 margin-top: 10px;
                 display: block;
                 &:hover {
@@ -459,6 +458,26 @@
                     border-left: 1px solid #4377A2;
                     &:first-child {
                         border-left: none;
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        >li {
+            >a {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
+                border: 1px solid #406999;
+                &:hover {
+                    background-color: #075185;
+                }
+            }
+            &.active {
+                >a {
+                    background-color: #075185;
+                    &:hover {
+                        border-color: #406999;
                     }
                 }
             }

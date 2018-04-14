@@ -69,6 +69,14 @@
                     background: #2CA4A2;
                 }
             }
+            &.dayoff {
+                b {
+                    color: $brand-success;
+                }
+                &::before {
+                    background: $brand-success;
+                }
+            }
         }
     }
 }
@@ -144,7 +152,8 @@
         font-size: 0;
         .school,
         .parent,
-        .teacher {
+        .teacher,
+        .dayoff {
             width: 6px;
             height: 6px;
             border-radius: 50%;
@@ -157,6 +166,9 @@
         }
         .teacher {
             background: #F9A83C;
+        }
+        .dayoff {
+            background: $brand-success;
         }
     }
 }
