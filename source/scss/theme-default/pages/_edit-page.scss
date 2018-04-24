@@ -7,6 +7,9 @@
         border-radius: 5px;
         margin-bottom: 10px;
         li {
+            @include breakpoint(xs) {
+                font-size: 16px;
+            }
             &+li {
                 margin-top: 10px;
             }

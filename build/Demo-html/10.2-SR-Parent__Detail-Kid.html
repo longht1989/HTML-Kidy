@@ -221,8 +221,30 @@
                                             </div>
                                         </div>
                                         <ul class="calendar__note">
-                                            <li class="parent"><b>Phụ huynh: </b>Phụ huynh: Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</li>
-                                            <li class="teacher"><b>Giáo viên: </b>Con hôm nay đau bụng nên không kịp đi vệ sinh, ị đùn ra lớp. Bố mẹ về nhớ cho con uống thuốc.</li>
+                                            <li class="parent editable">
+                                                <div class="text"><b>Phụ huynh: </b>Phụ huynh: Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</div>
+                                                <!-- trigger dropdown -->
+                                                <div class="note-trigger dropdown">
+                                                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-ellipsis-h"></span></a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                        <li class="edit"><a><span class="fa fa-edit"></span>Sửa</a></li>
+                                                        <li class="delete"><a><span class="fa fa-trash-o"></span>Xóa</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- .end trigger dropdown -->
+                                            </li>
+                                            <li class="teacher editable">
+                                                <div class="text"><b>Giáo viên: </b>Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</div>
+                                                <!-- trigger dropdown -->
+                                                <div class="note-trigger dropdown">
+                                                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-ellipsis-h"></span></a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                        <li class="edit"><a><span class="fa fa-edit"></span>Sửa</a></li>
+                                                        <li class="delete"><a><span class="fa fa-trash-o"></span>Xóa</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- .end trigger dropdown -->
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -454,19 +476,39 @@
                                     </span>
                                 </div>
                                 <div class="general-comment__listing">
-                                    <div class="general-comment__item">
+                                    <div class="general-comment__item editable">
                                         <div class="user">
                                             <div class="avatar"><img class="img-responsive" src="https://source.unsplash.com/random/384x384?sig=04"></div>
                                             <div class="name">Cô giáo 1</div>
                                             <div class="title">Cô giáo chủ nhiệm</div>
+                                            <!-- trigger dropdown -->
+                                            <div class="note-trigger dropdown">
+                                                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-ellipsis-h"></span></a>
+                                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                    <li class="edit"><a><span class="fa fa-edit "></span>Sửa</a></li>
+                                                    <li class="delete"><a><span class="fa fa-trash-o"></span>Xóa</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- .end trigger dropdown -->
                                         </div>
                                         <div class="comment">Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.</div>
                                     </div>
-                                    <div class="general-comment__item">
+                                    <div class="general-comment__item editable">
                                         <div class="user">
                                             <div class="avatar"><img class="img-responsive" src="https://source.unsplash.com/random/384x384?sig=03"></div>
                                             <div class="name">Cô giáo 2</div>
                                             <div class="title">Trợ giảng</div>
+                                            <!-- trigger dropdown -->
+                                            <div class="note-trigger dropdown">
+                                                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-ellipsis-h"></span></a>
+                                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                    <li class="edit"><a><span class="fa fa-edit "></span>Sửa</a></li>
+                                                    <li class="delete"><a><span class="fa fa-trash-o"></span>Xóa</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- .end trigger dropdown -->
                                         </div>
                                         <div class="comment">Trong kinh tế học, không có công thức, quy luật nào thể hiện việc giảm được 9% thời gian viết chữ, in ấn thì năng suất lao động sẽ tăng lên tương ứng. Mặt khác, con số 9% cũng là đề xuất chủ quan của ông Bùi Hiền, không kèm theo kết quả nghiên cứu, thống kê.</div>
                                     </div>
@@ -474,6 +516,25 @@
                             </div>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                    // action for daily note
+                    $(".dropdown-menu .edit").on("click", function() {
+                        $(this).closest('.note-trigger').siblings('.text').addClass('active');
+                        $(this).closest('.note-trigger').siblings('.text').html('<b>Phụ huynh: </b><textarea rows="1" class="form-control">Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</textarea><a class="cancel">Hủy</a>');
+                        $(this).parents('.general-comment__item').addClass('active');
+                        $(this).parents('.user').siblings('.comment').html('<textarea rows="1" class="form-control">Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.</textarea><a class="cancel">Hủy</a>');
+                    });
+                    $(".dropdown-menu .delete").on("click", function() {
+                        $(this).parents('.editable').remove();
+                        $(this).parents('.general-comment__item').remove();
+                    });
+                    $(".editable").on("click", ".cancel", function() {
+                        $(this).closest('.note-trigger').siblings('.text').removeClass('active');
+                        $(this).parents('.text').html('<b>Phụ huynh: </b>&nbsp;Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.');
+                        $(this).parents('.general-comment__item').removeClass('active');
+                        $(this).parents('.comment').html('Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.');
+                    });
+                    </script>
                     <!-- Thông tin trường lớp -->
                     <div class="box">
                         <div class="box__header"><span>Thông tin trường lớp</span></div>

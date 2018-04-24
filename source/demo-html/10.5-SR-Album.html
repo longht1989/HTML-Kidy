@@ -146,31 +146,31 @@
             <div class="pswp-wrap">
                 <div class="row">
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=102" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=102" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=103" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=103" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=104" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=104" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=105" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=105" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=106" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=106" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=107" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=107" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=108" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=108" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=109" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=109" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=110" alt=""></div>
+                        <div class="class-album__item"><img class="img-responsive" src="https://source.unsplash.com/random/768x432?sig=110" alt=""><span class="fa fa-close"></span></div>
                     </div>
                     <div class="col-xs-6 col-sm-3">
                         <div class="class-album__item item item--new album__image" style="width: 100%;">
@@ -220,6 +220,20 @@
                     </div>
                 </div>
             </div>
+            <!-- pagination -->
+            <ul class="pagination pull-right">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <!-- .End pagination -->
+            <script type="text/javascript">
+            $('.class-album__item .fa-close').click(function() {
+                $(this).closest('.col-xs-6.col-sm-3').remove();
+            });
+            </script>
         </div>
     </div>
     <!-- site footer  -->

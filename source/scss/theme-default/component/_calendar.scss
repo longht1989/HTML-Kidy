@@ -35,10 +35,32 @@
         li {
             padding-left: 10px;
             position: relative;
-            font-size: 12px;
+            font-size: 14px;
             font-style: italic;
             &+li {
                 margin-top: 8px;
+            }
+            &.editable {
+                padding-right: 26px;
+            }
+            .active {
+                @include clearfix();
+                b {
+                    float: left;
+                }
+                .form-control {
+                    max-width: 80%;
+                    float: left;
+                    margin: 0 5px;
+                }
+                a {
+                    line-height: 35px;
+                    color: white;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
             &::before {
                 content: '';
@@ -52,7 +74,6 @@
                 left: 0;
             }
             &.parent {
-
                 b {
                     color: #F9A83C;
                 }
@@ -62,6 +83,7 @@
             }
             &.teacher {
                 text-align: left;
+                overflow: visible;
                 b {
                     color: #2CA4A2;
                 }
