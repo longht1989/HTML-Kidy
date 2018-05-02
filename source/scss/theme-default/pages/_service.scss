@@ -331,3 +331,162 @@
         }
     }
 }
+
+// admission page
+.admission {
+    &-page {
+        padding-top: 0;
+        padding-bottom: 0;
+        h2 {
+            margin-bottom: 16px;
+            font-size: 48px;
+            line-height: 1.3em;
+            @include breakpoint(xs) {
+                font-size: 32px;
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.4em;
+        }
+    }
+    &__area {
+        &.cover {
+            background: white;
+            @include breakpoint(1024px) {
+                padding-bottom: 0;
+            }
+            .text {
+                padding: 40px 0;
+                text-align: center;
+            }
+            @include breakpoint(sm) {
+                .text {
+                    padding-top: 128px;
+                }
+                .image {
+                    padding-top: 64px;
+                }
+            }
+        }
+        &.analysis {
+            background: url(../img/admission_analysis.png) bottom right no-repeat #e9eff2;
+            background-size: cover;
+            padding: 48px 0;
+
+            @include breakpoint(sm) {
+                padding: 80px 0;
+            }
+            .box-content {
+                text-align: center;
+                @include breakpoint(xs) {
+                    margin-bottom: 40px;
+                }
+            }
+            .title {
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: bold;
+                @include breakpoint(xs) {
+                    font-size: 18px;
+                }
+            }
+            .number {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 12px;
+                .fa {
+                    color: #22A3AE;
+                    margin-right: 5px;
+                    font-size: 24px;
+                }
+            }
+        }
+        &.making {
+            padding: 80px 0;
+            background: #F9AE49;
+            .bullet_listing {
+                margin-bottom: 24px;
+                @include breakpoint(sm) {
+                    text-align: right;
+                    margin-bottom: 0px;
+                }
+                li {
+                    font-size: 18px;
+                    background: url(../img/service_bullet_black_flip.png) left top 5px no-repeat;
+                    background-size: 39px 16px;
+                    padding: 0 0 0 48px;
+                    &+li {
+                        margin: 16px 0 0;
+                    }
+                    @include breakpoint(sm) {
+                        font-size: 20px;
+                        background: url(../img/service_bullet_black.png) right top 8px no-repeat;
+                        background-size: 39px 16px;
+                        padding: 0 48px 0 0; // margin-top: 88px;
+                        &+li {
+                            margin: 32px 0 0;
+                        }
+                    }
+                }
+                &.right {
+                    @include breakpoint(sm) {
+                        text-align: left;
+                    }
+                    li {
+                        @include breakpoint(sm) {
+                            background: url(../img/service_bullet_black_flip.png) left top 8px no-repeat;
+                            background-size: 39px 16px;
+                            padding: 0 0 0 48px;
+                        }
+                    }
+                }
+            }
+        }
+        &.price {
+            background: white;
+            padding-top: 80px;
+            @include breakpoint(xs) {
+                text-align: center;
+                padding-top: 48px;
+            }
+            .image {
+                @include breakpoint(xs) {
+                    padding-top: 32px;
+                }
+            }
+            .box-content {
+                @include breakpoint(sm) {
+                    padding-top: 40px;
+                }
+            }
+        }
+        &.contact {
+            background-color: #f0f0f0;
+            padding: 80px 0;
+            .input-form {
+                @include clearfix();
+                .form-control {
+                    float: left;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    width: calc(100% - 80px);
+                }
+                .btn {
+                    float: left;
+                    width: 80px;
+                    height: 34px;
+                    line-height: 34px;
+                    padding: 0;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+            .box-content {
+                @include breakpoint(xs) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
