@@ -245,8 +245,10 @@
     text-align: center;
     &__avatar {
         margin-bottom: 5px;
-        border-radius: 50%;
-        overflow: hidden;
+        .img-responsive {
+            border-radius: 50%;
+            @include center-block;
+        }
     }
     &__name {
         font-size: 14px;
