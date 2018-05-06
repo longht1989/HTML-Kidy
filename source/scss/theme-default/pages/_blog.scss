@@ -1,0 +1,39 @@
+.blog {
+    &-page {
+        background-color: white;
+        .zone {
+            margin-bottom: 20px;
+            &__title {
+                font-size: 18px;
+            }
+            &+.zone {
+                padding-top: 20px;
+                border-top: 1px solid #eee;
+            }
+        }
+        .story {
+            margin-bottom: 10px;
+            .meta {
+                color: #999;
+                margin-bottom: 0;
+            }
+            .summary {
+                margin: 5px 0 0;
+                color: #555;
+            }
+            @include breakpoint(xs) {
+                .summary {
+                    display: none;
+                }
+            }
+            &-cover {
+                margin-bottom: 15px;
+                @include breakpoint(xs) {
+                    .summary {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
