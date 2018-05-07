@@ -34,6 +34,126 @@
                     }
                 }
             }
+            &-left {
+                margin-bottom: 16px;
+                @include breakpoint(xs) {
+                    .thumb {
+                        width: 33.33%;
+                    }
+                    .meta,
+                    .summary {
+                        display: none;
+                    }
+                }
+            }
+            &-listing {
+                padding-top: 16px;
+                border-top: 1px solid #ddd;
+                .story-left {
+                    .title {
+                        overflow: hidden;
+                    }
+                    &+.story-left {
+                        padding-top: 12px;
+                        border-top: 1px solid #eee;
+                    }
+                }
+            }
+        }
+        .pagination {
+            margin-bottom: 20px;
+        }
+        .two-cols {
+            @include clearfix();
+            margin-left: -10px;
+            margin-right: -10px;
+            font-size: 0;
+            >* {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                padding: 0 10px;
+            }
+        }
+        .three-cols {
+            @include clearfix();
+            margin-left: -10px;
+            margin-right: -10px;
+            font-size: 0;
+            >* {
+                display: inline-block;
+                vertical-align: top;
+                width: 33.33%;
+                padding: 0 10px;
+            }
+            &-sm {
+                @include breakpoint(sm) {
+                    @include clearfix();
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    font-size: 0;
+                    >* {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 33.33%;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            &-md {
+                @include breakpoint(md) {
+                    @include clearfix();
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    font-size: 0;
+                    >* {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 33.33%;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+        .four-cols {
+            @include clearfix();
+            margin-left: -10px;
+            margin-right: -10px;
+            font-size: 0;
+            >* {
+                display: inline-block;
+                vertical-align: top;
+                width: 25%;
+                padding: 0 10px;
+            }
+            &-sm {
+                @include breakpoint(sm) {
+                    @include clearfix();
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    font-size: 0;
+                    >* {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 25%;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            &-md {
+                @include breakpoint(md) {
+                    @include clearfix();
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    font-size: 0;
+                    >* {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 25%;
+                        padding: 0 10px;
+                    }
+                }
+            }
         }
     }
 }
