@@ -337,8 +337,52 @@
                 <!-- .End box skin2 -->
             </div>
             <div class="clearfix"></div>
-            <!-- normal zone -->
+            <!-- related zone -->
             <div class="zone pt40">
+                <div class="zone__header">
+                    <h2><a class="zone__header-link" href="#">Tin liên quan</a></h2>
+                </div>
+                <div class="zone__content l-grid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="item item--16x9" data-mh="related-item">
+                                <div class="item__thumb">
+                                    <a href="4.5-tips-detail.html"><img src="https://source.unsplash.com/random/768x432?sig=30" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link">Fingitur expedita caritatem emolumenti iudex, nati argumentum dissidens.</a></div>
+                                    <div class="item__summary">Triario fames mandaremus quando naturae greges hanc filio discordans evolvendis, scribimus fidelissimae.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="item item--16x9" data-mh="related-item">
+                                <div class="item__thumb">
+                                    <a href="4.5-tips-detail.html"><img src="https://source.unsplash.com/random/768x432?sig=30" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link">Itaque interrogare incidunt procedat fuit antiquitate, reprehenderit. Nostrum.</a></div>
+                                    <div class="item__summary">Fere praeclaram repugnantibus inani consequantur contenta respondendum sollicitant partis, aiunt pronuntiaret venustate.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="item item--16x9" data-mh="related-item">
+                                <div class="item__thumb">
+                                    <a href="4.5-tips-detail.html"><img src="https://source.unsplash.com/random/768x432?sig=30" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="item__info">
+                                    <div class="item__title"><a href="3-detail.html" class="item__link">Successerit, frequenter interrogare disciplinis, intellegam. Caelo conferebamus talem.</a></div>
+                                    <div class="item__summary">Emolumento unde officiis inpendente convincere exercendi, menandro aegritudo pugnantibus nemini angere laboriosam.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .End related zone -->
+            <!-- normal zone -->
+            <div class="zone">
                 <div class="zone__header">
                     <h2><a class="zone__header-link" href="#">Trường mầm non tiêu biểu</a></h2>
                 </div>
@@ -649,6 +693,22 @@
             </div>
             <!-- .End normal zone -->
         </div>
+        <div class="balloon bottom-left visible-md visible-lg">
+            <div class="balloon__tool">
+                <a class="fa fa-plus"></a>
+                <a class="fa fa-minus"></a>
+            </div>
+            <div class="balloon__content">
+                <a href="https://kidy.vn/dich-vu/ho-tro-tuyen-sinh"><img src="fig-image/balloon_banner.jpg" class="img-responsive" alt=""></a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".balloon").on('click', '.fa', function() {
+                    $(this).closest(".balloon").toggleClass('is-hide');
+                });
+            });
+        </script>
     </div>
     <!-- site footer  -->
     <footer class="site-footer">

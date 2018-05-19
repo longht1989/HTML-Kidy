@@ -133,6 +133,9 @@
 .qc {
     margin-bottom: 20px;
     text-align: center;
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -156,5 +159,52 @@
     }
     &+.box {
         margin-top: 20px;
+    }
+}
+
+//balloon box
+.balloon {
+    transition: all 0.2s linear;
+    .fa-plus {
+        display: none;
+    }
+    &.bottom-left {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+    &__tool {
+        @include clearfix();
+        margin-bottom: 5px;
+        .fa {
+            float: right;
+            margin-left: 5px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            line-height: 32px;
+            color: #555;
+            background-color: white;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    &__content {
+        background-color: $brand-info;
+        padding: 15px;
+        width: 237px;
+        height: 430px;
+    }
+    &.is-hide {
+        bottom: -430px;
+        left: -200px;
+        .fa-minus {
+            display: none;
+        }
+        .fa-plus {
+            display: block;
+        }
     }
 }
