@@ -30,7 +30,7 @@
                 -webkit-box-shadow: 0px 0px 10px 3px rgba(35, 124, 245, .6);
                 box-shadow: 0px 0px 10px 3px rgba(35, 124, 245, .6);
             }
-            > * {
+            >* {
                 margin-bottom: 20px;
                 @include last-child-y();
             }
@@ -49,6 +49,22 @@
                 text-transform: uppercase;
                 color: $brand-primary;
                 border-bottom: 1px solid #ddd;
+            }
+        }
+        .basic-user {
+            margin-top: 5px;
+        }
+        .advance-user {
+            margin-top: 10px;
+            display: none;
+            .check-box {
+                // position: relative;
+                input[type=checkbox],
+                input[type=radio] {
+                    &:checked+label::before {
+                        color: $brand-primary;
+                    }
+                }
             }
         }
     }
@@ -75,8 +91,7 @@
     }
     .fa {
         float: left;
-        line-height: inherit;
-        // padding: 0 25px;
+        line-height: inherit; // padding: 0 25px;
         color: white;
         margin-right: 15px;
         font-size: 32px;

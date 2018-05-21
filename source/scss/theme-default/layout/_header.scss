@@ -415,6 +415,10 @@
             li {
                 @include clearfix;
             }
+            .no-js & {
+                max-height: 150px;
+                overflow: hidden;
+            }
         }
         .expert {
             &__avatar {

@@ -119,17 +119,37 @@
                     </div>
                     <div class="form-group">
                         <p><b>Bạn là:</b></p>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6">
+                        <div class="row basic-user">
+                            <div class="col-xs-12 col-sm-4">
                                 <div class="radio-box">
                                     <input id="user-parent" type="radio" name="userkind" value="user-parent">
                                     <label for="user-parent">Phụ huynh</label>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-sm-4">
                                 <div class="radio-box">
                                     <input id="user-teacher" type="radio" name="userkind" value="user-teacher">
                                     <label for="user-teacher">Giáo viên</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="radio-box">
+                                    <input id="user-school" type="radio" name="userkind" value="user-school">
+                                    <label for="user-school">Cơ sở giáo dục</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row advance-user">
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="radio-box">
+                                    <input id="user-preschool" type="radio" name="schoolkind" value="user-preschool">
+                                    <label for="user-preschool">Trường mầm non</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="radio-box">
+                                    <input id="user-talentcenter" type="radio" name="schoolkind" value="user-talentcenter">
+                                    <label for="user-talentcenter">Trung tâm năng khiếu</label>
                                 </div>
                             </div>
                         </div>
@@ -155,6 +175,17 @@
                     </div>
                 </div>
             </form>
+            <script type="text/javascript">
+            $('#user-school').click(function() {
+                $('.advance-user').show();
+            });
+            $('#user-parent').click(function() {
+                $('.advance-user').hide();
+            });
+            $('#user-teacher').click(function() {
+                $('.advance-user').hide();
+            });
+            </script>
             <!-- register with social network -->
             <div class="register__box" id="social-register" style="display:none;">
                 <h3 class="register__box__header"><a href="1-index.html" title="Kidy.vn"><img src="../App_Themes/img/logo.png" height="45" width="92" alt="Kidy.vn"></a></h3>

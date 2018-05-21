@@ -170,6 +170,20 @@
             height: auto;
         }
     }
+    &__course {
+        margin-bottom: 10px;
+        li {
+            display: inline-block;
+            color: $brand-primary;
+            &+li {
+                &::before {
+                    display: inline-block;
+                    content: '-';
+                    margin: 0 4px;
+                }
+            }
+        }
+    }
     &.has-sale {
         position: relative;
         .item__promote {
@@ -179,7 +193,7 @@
             width: 64px;
             height: 64px;
             z-index: 1;
-            img{
+            img {
                 width: 100%;
                 height: auto;
             }
@@ -280,6 +294,13 @@
                 width: initial !important;
                 overflow: hidden;
                 float: none;
+            }
+        }
+        .talent-center-listing & {
+            .item__info {
+                @include breakpoint(sm) {
+                    width: 75%;
+                }
             }
         }
     }

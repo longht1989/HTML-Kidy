@@ -374,28 +374,30 @@ $('.forkid__navbar-item a[data-href').click(function() {
 
 $(function() {
     var getpos = $("#zone-penultimate");
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= ($(getpos).position().top + 100)) {
-            jQuery(function($) {
-                // custom formatting example
-                $('.count-number').data('countToOptions', {
-                    formatter: function(value, options) {
-                        return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+    if (getpos.length > 0) {
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= ($(getpos).position().top + 100)) {
+                jQuery(function($) {
+                    // custom formatting example
+                    $('.count-number').data('countToOptions', {
+                        formatter: function(value, options) {
+                            return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                        }
+                    });
+                    // start all the timers
+                    $('.timer').each(count);
+
+                    function count(options) {
+                        var $this = $(this);
+                        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                        $this.countTo(options);
                     }
                 });
-                // start all the timers
-                $('.timer').each(count);
-
-                function count(options) {
-                    var $this = $(this);
-                    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-                    $this.countTo(options);
-                }
-            });
-            $("[data-mh=zone-count]").matchHeight();
-            $(window).off('scroll');
-        };
-    });
+                $("[data-mh=zone-count]").matchHeight();
+                $(window).off('scroll');
+            };
+        });
+    }
 });
 
 /*.End counter for index*/
