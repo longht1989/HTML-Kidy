@@ -219,11 +219,10 @@
         }
     }
     @include Element(main-content) {
-        @include clearfix();
-        height: 205px;
-        overflow: hidden;
+        @include clearfix(); // height: 205px;
+        // overflow: hidden;
         position: relative;
-        padding-bottom: 40px;
+        // padding-bottom: 40px;
         @include transition(max-height, 1, ease);
         font-size: 16px;
         line-height: 1.4em;
@@ -259,6 +258,7 @@
             margin-bottom: 0; // background: linear-gradient(to bottom, transparent, #fff 30%);
             background: linear-gradient(rgba(255, 255, 255, 0), #fff 30%);
             cursor: pointer;
+            display: none;
             &:hover {
                 a {
                     color: $brand-success;
