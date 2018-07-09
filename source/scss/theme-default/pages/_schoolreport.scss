@@ -325,6 +325,16 @@
     margin-bottom: 15px;
     .thumb {
         margin-bottom: 10px;
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
     }
     .title {
         font-size: 14px;
@@ -357,13 +367,44 @@
     margin-left: -10px;
     margin-right: -10px;
     font-size: 0;
+    margin-top: 20px;
     .class-album {
         display: inline-block;
         width: 50%;
         padding: 0 10px;
         vertical-align: top;
+        position: relative;
         @include breakpoint(sm) {
             width: 25%;
+        }
+        .tools {
+            font-size: 14px;
+            position: absolute;
+            top: 4px;
+            right: 13px;
+            display: none;
+            .fa {
+                padding: 4px;
+                cursor: pointer;
+                background-color: white;
+                border-radius: 2px;
+                width: 20px;
+                text-align: center;
+                margin-left: 2px;
+                opacity: 0.8;
+            }
+        }
+        .thumb {
+            &:hover {
+                .tools {
+                    display: block;
+                    .fa {
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
     }
 }
