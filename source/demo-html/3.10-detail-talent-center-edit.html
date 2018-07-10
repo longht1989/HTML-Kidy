@@ -133,7 +133,7 @@
                         <li><a href="#block04">Tuyển sinh</a></li>
                         <li><a href="#block05">Thư viện</a></li>
                         <li><a href="#block06">Liên hệ</a></li>
-                        <li><a href="#block07">Các chi nhánh khác:</a></li>
+                        <li><a href="#center-branch">Các chi nhánh khác:</a></li>
                         <li><a href="#block08">Các môn đào tạo</a></li>
                     </ul>
                     <!-- change avatar -->
@@ -549,48 +549,43 @@
                         </div>
                     </div>
                     <!-- Các chi nhánh khác -->
-                    <div class="edit__wrap" id="block07">
+                    <div class="edit__wrap" id="center-branch">
                         <h2 class="edit__wrap-title">Các chi nhánh khác</h2>
                         <!-- block udpate, required -->
                         <div class="edit__block">
                             <div class="edit__block-hdr">
                                 <h3 title="Thông tin bắt buộc">Các chi nhánh khác</h3>
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, in!</p>
+                                <p class="text-muted">Hiển thị các chi nhánh khác ở đây</p>
                             </div>
                             <div class="edit__block-content">
-                                <!-- block -->
-                                <div class="edit__block is-required">
-                                    <div class="edit__block-hdr">
-                                        <h3 title="Thông tin bắt buộc">Tên chi nhánh <small class="text-success">Thông tin bắt buộc*</small></h3>
-                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, in!</p>
-                                    </div>
-                                    <div class="edit__block-content">
-                                        <textarea type="text" class="form-control" rows="1" placeholder=" Trường mầm non Sao Việt "></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <!-- block -->
-                                        <div class="edit__block is-required">
-                                            <div class="edit__block-hdr">
-                                                <h3 title="Thông tin bắt buộc">Số điện thoại liên lạc <small class="text-success">Thông tin bắt buộc*</small></h3>
-                                            </div>
-                                            <div class="edit__block-content">
-                                                <input type="text" class="form-control" placeholder="Ví dụ: (043) 944-0178">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <!-- block -->
-                                        <div class="edit__block is-required">
-                                            <div class="edit__block-hdr">
-                                                <h3 title="Thông tin bắt buộc">Địa chỉ email <small class="text-success">Thông tin bắt buộc*</small></h3>
-                                            </div>
-                                            <div class="edit__block-content">
-                                                <input type="email" class="form-control" placeholder="Ví dụ: saoviet@gmail.com">
-                                            </div>
-                                        </div>
-                                    </div>
+                                <!-- table sortable -->
+                                <table class="table table-striped table-sortable">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên chi nhánh</th>
+                                            <th>Địa chỉ</th>
+                                            <th>Số Điện thoại</th>
+                                            <th class="table-action">&nbsp</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea class="form-control" rows="1" placeholder="Cơ sở 1"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea rows="1" class="form-control">Cầu Giấy, HN</textarea>
+                                            </td>
+                                            <td>
+                                                <textarea rows="1" class="form-control">090.000.0000</textarea>
+                                            </td>
+                                            <td class="table-action"><a class="a-link">Xóa</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- .End table sortable -->
+                                <div class="edit__submit">
+                                    <a class="btn btn-info add-row"><span class="fa fa-plus"></span> Thêm cơ sở mới</a>
                                 </div>
                             </div>
                         </div>
@@ -599,7 +594,23 @@
                             <button class="btn btn-default">Hủy</button>
                             <button class="btn btn-primary">Xác nhận & Lưu</button>
                         </div>
-                        <!-- block -->
+                        <!-- script for table -->
+                        <script type="text/javascript">
+                        // sort row in table
+                        $('.table-sortable tbody').sortable();
+                        // remove row in table
+                        $(".table").on('click', '.a-link', function() {
+                            $(this).closest('tr').remove();
+                        });
+                        // add row in table
+                        $('#center-branch .add-row').click(function() { $(this).parent().siblings('.table').find('tbody').append('<tr><td><textarea class="form-control" rows="1" placeholder="Tên chi nhánh mới"></textarea></td> <td><textarea rows="1" class="form-control">Địa chỉ chi nhánh mới</textarea></td><td><textarea rows="1" class="form-control">Số điện thoại chi nhánh mới</textarea></td><td class="table-action"><a class="a-link">Xóa</a></td></tr>') });
+                        // Show full week schedule
+                        $('.view-week').click(function() {
+                            $(this).toggleClass('is-active');
+                            $(this).parents().siblings('.table-fullweek').toggle();
+                        });
+                        </script>
+                        <!-- .End script for table -->
                     </div>
                 </div>
             </div>
