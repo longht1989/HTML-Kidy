@@ -110,9 +110,21 @@
             border: 1px dashed #aaa;
             padding: 10px;
             line-height: 20px;
+            @include clearfix;
             b {
                 font-size: 16px;
                 color: $brand-success;
+            }
+            .a-link {
+                background-color: $brand-primary;
+                border-radius: 2px;
+                padding: 2px 8px;
+                color: white;
+                font-weight: normal;
+                text-decoration: none;
+                @include breakpoint(xs) {
+                    margin-top: 16px;
+                }
             }
         }
     }
@@ -221,8 +233,7 @@
     @include Element(main-content) {
         @include clearfix(); // height: 205px;
         // overflow: hidden;
-        position: relative;
-        // padding-bottom: 40px;
+        position: relative; // padding-bottom: 40px;
         @include transition(max-height, 1, ease);
         font-size: 16px;
         line-height: 1.4em;
