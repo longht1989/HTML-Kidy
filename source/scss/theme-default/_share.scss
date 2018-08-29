@@ -1,5 +1,8 @@
 a.a-link {
     color: $brand-primary;
+    &-success {
+        color: $brand-success;
+    }
     &:hover {
         text-decoration: underline;
     }

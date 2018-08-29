@@ -193,9 +193,21 @@
             width: 64px;
             height: 64px;
             z-index: 1;
-            img {
-                width: 100%;
-                height: auto;
+            background: url(../img/badge.png) left top no-repeat;
+            background-size: 100%;
+            color: white;
+            font-size: 12px;
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+            .percent {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                p {
+                    font-size: 16px;
+                }
             }
         }
     }
