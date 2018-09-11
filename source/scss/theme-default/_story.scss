@@ -648,6 +648,22 @@
             color: #d9534f;
             font-weight: bold;
         }
+        &.has-sale {
+            .item__price {
+                color: #333;
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 0;
+                text-decoration-line: line-through;
+                &--off {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $brand-success;
+                    margin-bottom: 5px;
+                }
+            }
+        }
     }
     @include Modifier(img-shadow) {
         position: relative;
