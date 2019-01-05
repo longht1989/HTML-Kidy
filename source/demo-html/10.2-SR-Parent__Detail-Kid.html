@@ -137,6 +137,12 @@
             <!-- kid listing -->
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+                    <!-- Thông báo khẩn -->
+                    <div class="alert alert-success alert-dismissible fade in" role="alert"> 
+                        <h4><b>Thông báo</b></h4>
+                        <br>
+                        <p>Ngày 06/01/2019 Nhiệt độ dưới 10*C, các con nghỉ học.</p>
+                    </div>
                     <!-- Thời khóa biểu -->
                     <div class="box">
                         <div class="box__header"><span>Thời khóa biểu</span></div>
@@ -516,25 +522,15 @@
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
-                    // action for daily note
-                    $(".dropdown-menu .edit").on("click", function() {
-                        $(this).closest('.note-trigger').siblings('.text').addClass('active');
-                        $(this).closest('.note-trigger').siblings('.text').html('<b>Phụ huynh: </b><textarea rows="1" class="form-control">Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</textarea><a class="cancel">Hủy</a>');
-                        $(this).parents('.general-comment__item').addClass('active');
-                        $(this).parents('.user').siblings('.comment').html('<textarea rows="1" class="form-control">Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.</textarea><a class="cancel">Hủy</a>');
-                    });
-                    $(".dropdown-menu .delete").on("click", function() {
-                        $(this).parents('.editable').remove();
-                        $(this).parents('.general-comment__item').remove();
-                    });
-                    $(".editable").on("click", ".cancel", function() {
-                        $(this).closest('.note-trigger').siblings('.text').removeClass('active');
-                        $(this).parents('.text').html('<b>Phụ huynh: </b>&nbsp;Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.');
-                        $(this).parents('.general-comment__item').removeClass('active');
-                        $(this).parents('.comment').html('Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.');
-                    });
-                    </script>
+                    <!-- Điểm thành phần -->
+                    <div class="box">
+                        <div class="box__header"><span>Điểm thành phần</span></div>
+                        <div class="box__content">
+                            <p class="text-center">
+                                <img src="https://www.excel-easy.com/examples/images/line-chart/line-chart.png" alt="" class="img-responsive">
+                            </p>
+                        </div>
+                    </div>
                     <!-- Thông tin trường lớp -->
                     <div class="box">
                         <div class="box__header"><span>Thông tin trường lớp</span></div>
@@ -689,6 +685,25 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript">
+    // action for daily note
+    $(".dropdown-menu .edit").on("click", function() {
+        $(this).closest('.note-trigger').siblings('.text').addClass('active');
+        $(this).closest('.note-trigger').siblings('.text').html('<b>Phụ huynh: </b><textarea rows="1" class="form-control">Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.</textarea><a class="cancel">Hủy</a>');
+        $(this).parents('.general-comment__item').addClass('active');
+        $(this).parents('.user').siblings('.comment').html('<textarea rows="1" class="form-control">Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.</textarea><a class="cancel">Hủy</a>');
+    });
+    $(".dropdown-menu .delete").on("click", function() {
+        $(this).parents('.editable').remove();
+        $(this).parents('.general-comment__item').remove();
+    });
+    $(".editable").on("click", ".cancel", function() {
+        $(this).closest('.note-trigger').siblings('.text').removeClass('active');
+        $(this).parents('.text').html('<b>Phụ huynh: </b>&nbsp;Con đang bị đau bụng, cô để ý đến con còn kêu đau bụng nữa không nhé.');
+        $(this).parents('.general-comment__item').removeClass('active');
+        $(this).parents('.comment').html('Sau khi những chỉ trích và ồn ào tạm lắng, ông Bùi Hiền tiếp tục khuấy động dư luận với việc công bố phần 2 đề xuất cải tiến chữ viết tiếng Việt. Hầu như không có tiếng nói nào ủng hộ, trừ chính… tác giả.');
+    });
+    </script>
     <!-- JS Global Compulsory -->
     <script src=" ../Jscripts/custom.js"></script>
     <!-- Js Dev plugin -->

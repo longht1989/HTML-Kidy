@@ -1,8 +1,10 @@
 a.a-link {
     color: $brand-primary;
+
     &-success {
         color: $brand-success;
     }
+
     &:hover {
         text-decoration: underline;
     }
@@ -18,9 +20,11 @@ a.a-link {
     border-radius: 3px;
     border: none;
     @include transition(all, 0.2, ease-out);
+
     .fa {
         margin-right: 5px;
     }
+
     &:focus,
     &:active,
     &:active:focus {
@@ -33,6 +37,7 @@ a.a-link {
     background-color: transparent;
     color: #555;
     @include transition(all, 0.2, ease-out);
+
     @include haf() {
         background-color: #111;
         color: white;
@@ -54,23 +59,28 @@ a.a-link {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px;
+
     &:focus {
         border-color: darken($brand-primary, 15%);
     }
+
     .has-error & {
         border-color: $brand-success;
         -webkit-box-shadow: none;
         box-shadow: none;
+
         &:focus {
             border-color: darken($brand-success, 15%);
             -webkit-box-shadow: none;
             box-shadow: none;
         }
     }
+
     &.is-filled {
         border-color: transparent;
         background: #f0f0f0;
         box-shadow: none;
+
         &:focus {
             border-color: darken($brand-primary, 15%);
         }
@@ -85,9 +95,11 @@ a.a-link {
     font-family: $font-family-itim;
     color: $brand-primary;
     margin-bottom: 20px;
+
     .fa {
         margin-right: 7px;
     }
+
     .heading-desc {
         font-size: 14px;
         line-height: 19px;
@@ -98,10 +110,12 @@ a.a-link {
 
 // style for checkbox & radiobox
 .check-box {
+
     // position: relative;
     input[type=checkbox],
     input[type=radio] {
         display: none;
+
         &:checked+label::before {
             content: "";
             font-family: "fontawesome";
@@ -114,6 +128,7 @@ a.a-link {
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
         }
     }
+
     label {
         margin-bottom: 0;
         display: inline-block;
@@ -123,6 +138,7 @@ a.a-link {
         margin-right: 15px;
         font-size: 13px;
         font-weight: normal;
+
         &::before {
             content: "";
             border-radius: 3px;
@@ -143,6 +159,7 @@ a.a-link {
 
 .radio-box {
     @extend .check-box;
+
     input[type=radio] {
         &:checked+label::before {
             content: '';
@@ -151,6 +168,7 @@ a.a-link {
             line-height: 14px;
         }
     }
+
     label {
         &::before {
             border-radius: 50%;
@@ -162,11 +180,13 @@ a.a-link {
 .progress {
     height: 32px;
     border-radius: 3px;
+
     &-bar {
         line-height: 32px;
         text-align: left;
 
         padding-left: 15px;
+
         .pull-right {
             font-size: 1.1em;
             padding-right: 10px;
@@ -178,15 +198,18 @@ a.a-link {
 @include Block(sorting-bar) {
     @include clearfix();
     margin-bottom: 15px;
+
     @include Element(label) {
         font-size: 14px;
         font-weight: bold;
         float: left;
         margin-right: 30px;
     }
+
     @include Element(filter) {
         margin-right: 30px;
         float: left;
+
         &.is-active {
             a {
                 text-decoration: underline;
@@ -200,6 +223,7 @@ a.a-link {
     margin-bottom: 15px;
     text-align: right;
     @include clearfix();
+
     >span {
         border-radius: 5px;
         padding: 3px 10px;
@@ -217,6 +241,7 @@ a.a-link {
     left: 0;
     bottom: 0;
     background-color: $gray-lighter;
+
     &__wrap {
         padding: 30px;
         border-radius: 5px;
@@ -224,14 +249,17 @@ a.a-link {
         text-align: center;
         width: 50%;
         margin: 30px auto;
+
         .is-child & {
             width: 100%;
             margin-top: 0;
         }
+
         &.is-full {
             width: 100%;
         }
     }
+
     &.is-child {
         position: static;
     }
@@ -247,6 +275,7 @@ a.a-link {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+
     >* {
         margin-bottom: 5px;
     }
@@ -260,6 +289,7 @@ a.a-link {
     margin-bottom: 30px;
     background-color: white;
     padding: 20px;
+
     .wrapper {
         margin-bottom: 10px;
     }
@@ -273,8 +303,10 @@ a.a-link {
     background-color: none;
     border-radius: $border-radius-base;
     font-weight: bold;
+
     >li {
         display: inline-block;
+
         +li:before {
             // [converter] Workaround for https://github.com/sass/libsass/issues/1115
             $nbsp: "\00a0";
@@ -283,9 +315,11 @@ a.a-link {
             color: #000;
         }
     }
+
     >.active {
         color: #000;
         font-size: 18px;
+
         &::before {
             font-size: 14px;
         }
@@ -294,6 +328,7 @@ a.a-link {
 
 .register-btn {
     margin-bottom: 20px;
+
     @include breakpoint(md) {
         margin-bottom: 0;
         text-align: right;
@@ -310,6 +345,7 @@ a.a-link {
     top: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: 100;
+
     &__message {
         z-index: 101;
         position: absolute;
@@ -323,12 +359,14 @@ a.a-link {
         transform: translate(0, -50%);
         background: white;
         box-shadow: 0 0px 15px 0px rgba(255, 255, 255, 0.66);
+
         >p,
         div {
             margin-bottom: 10px;
             @include last-child-y;
         }
     }
+
     &__close {
         position: absolute;
         top: 5px;
@@ -346,4 +384,11 @@ a.a-link {
     padding: 15px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+.alert-success {
+    border-radius: 5px;
+    background-color: lighten($brand-success, 37%);
+    border-color: lighten($brand-success, 20%);
+    color: black;
 }

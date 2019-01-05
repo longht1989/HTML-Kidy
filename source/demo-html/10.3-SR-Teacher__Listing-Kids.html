@@ -445,11 +445,40 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- modal notification -->
+                            <div id="ModalNoti" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog box" role="document">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel"><b>Nhận xét bé <span>Nguyễn Văn A</span></b></h4>
+                                    </div>
+                                    <div class="modal-content">
+                                        <div class="general-comment__tool">
+                                            <span>Từ ngày</span>
+                                            <a class="btn btn-default">05/12/2017</a>
+                                            <span>đến ngày</span>
+                                            <a class="btn btn-default">12/12/2017</a>
+                                            <span class="btn-group">
+                                    </span>
+                                        </div>
+                                        <textarea placeholder="Nội dung thông báo" class="form-control" rows="5"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                        <button type="button" class="btn btn-success">Gửi thông báo</button>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Multiple select -->
-                            <div class="box__advance text-right">
-                                <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display:none;"><span class="fa fa-edit"></span> Nhận xét chung</a>
-                                <a class="btn btn-info btn-action"><span class="fa fa-users"></span>Chọn nhiều bé</a>
-                                <a class="btn btn-default btn-action" style="display: none;"><span class="fa fa-close"></span>Hủy chọn</a>
+                            <div class="box__advance clearfix">
+                                <div class="pull-left">
+                                    <a class="btn btn-success" data-toggle="modal" data-target="#ModalNoti"><span class="fa fa-send"></span> Thông báo</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display:none;"><span class="fa fa-edit"></span> Nhận xét chung</a>
+                                    <a class="btn btn-info btn-action"><span class="fa fa-users"></span>Chọn nhiều bé</a>
+                                    <a class="btn btn-default btn-action" style="display: none;"><span class="fa fa-close"></span>Hủy chọn</a>
+                                </div>
                             </div>
                             <script type="text/javascript">
                             $('.box__advance .btn-action').click(function() {
@@ -530,69 +559,69 @@
                         <div class="teacher__avatar">
                             <img class="img-responsive" src="https://source.unsplash.com/random/384x384?sig=01">
                         </div>
-                        <h3 class="teacher__name">Cô giáo 1</h3>
-                        <p class="teacher__desc">Cô giáo chủ nhiệm</p>
-                        <p class="teacher__phone"><a href="tel:0908.888.888">0908.888.888</a></p>
-                    </div>
-                    <!-- box school info -->
-                    <div class="box">
-                        <div class="box__header"><span>Thông tin trường của bé</span></div>
-                        <div class="box__content">
-                            <h4 class="school__name"><b>Trường mầm non Bé Bé na</b></h4>
-                            <br>
-                            <p class="school__address">Số 14 BT5-X2 , Khu đô thị Bắc Linh Đàm, Hoàng Mai, Hà Nội</p>
-                            <br>
-                            <p class="school__info">Điện thoại: <a class="a-link" href="tel:1900545451">1900545451</a></p>
+                            <h3 class="teacher__name">Cô giáo 1</h3>
+                            <p class="teacher__desc">Cô giáo chủ nhiệm</p>
+                            <p class="teacher__phone"><a href="tel:0908.888.888">0908.888.888</a></p>
+                        </div>
+                        <!-- box school info -->
+                        <div class="box">
+                            <div class="box__header"><span>Thông tin trường của bé</span></div>
+                            <div class="box__content">
+                                <h4 class="school__name"><b>Trường mầm non Bé Bé na</b></h4>
+                                <br>
+                                <p class="school__address">Số 14 BT5-X2 , Khu đô thị Bắc Linh Đàm, Hoàng Mai, Hà Nội</p>
+                                <br>
+                                <p class="school__info">Điện thoại: <a class="a-link" href="tel:1900545451">1900545451</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- site footer  -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="site-footer__box">
-                        <h3 class="site-footer__title">Giới thiệu</h3>
-                        <p class="site-footer__text">Kidy là một hệ sinh thái giáo dục, tổng hòa các mối quan hệ giữa gia đình, nhà trường và xã hội, là 3 yếu tố chính hình thành nên tính cách và sự phát triển của trẻ trong 6 năm đầu đời</p>
-                        <p class="site-footer__text text-sub copyright">© Copyright 2017 by Kidy.vn</p>
+        <!-- site footer  -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="site-footer__box">
+                            <h3 class="site-footer__title">Giới thiệu</h3>
+                            <p class="site-footer__text">Kidy là một hệ sinh thái giáo dục, tổng hòa các mối quan hệ giữa gia đình, nhà trường và xã hội, là 3 yếu tố chính hình thành nên tính cách và sự phát triển của trẻ trong 6 năm đầu đời</p>
+                            <p class="site-footer__text text-sub copyright">© Copyright 2017 by Kidy.vn</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="site-footer__box">
-                        <h3 class="site-footer__title">Tìm trường</h3>
-                        <p class="site-footer__text text-sub">VD Tìm trường ở khu Thành Công: Thành Công, Ba Đình, Hà Nội</p>
-                        <p class="site-footer__text">
-                            <a href="1-index.html" id="footer-search" class="btn btn-primary btn-round"><span class="fa fa-search"></span> Tìm kiếm ngay</a>
-                        </p>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="site-footer__box">
+                            <h3 class="site-footer__title">Tìm trường</h3>
+                            <p class="site-footer__text text-sub">VD Tìm trường ở khu Thành Công: Thành Công, Ba Đình, Hà Nội</p>
+                            <p class="site-footer__text">
+                                <a href="1-index.html" id="footer-search" class="btn btn-primary btn-round"><span class="fa fa-search"></span> Tìm kiếm ngay</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="clearfix visible-sm"></div>
-                <div class="col-xs-12 col-sm-6 col-md-2">
-                    <div class="site-footer__box">
-                        <h3 class="site-footer__title">Cho con</h3>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link">Video hướng dẫn</a></p>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link">Bài kiểm tra</a></p>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link">Biểu đồ phát triển</a></p>
+                    <div class="clearfix visible-sm"></div>
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="site-footer__box">
+                            <h3 class="site-footer__title">Cho con</h3>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link">Video hướng dẫn</a></p>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link">Bài kiểm tra</a></p>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link">Biểu đồ phát triển</a></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-2">
-                    <div class="site-footer__box">
-                        <h3 class="site-footer__title">Liên hệ</h3>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-phone"></span>0989 553 551</a></p>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-facebook-square"></span>/kidy.vn</a></p>
-                        <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-youtube"></span>/kidy_channel</a></p>
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                        <div class="site-footer__box">
+                            <h3 class="site-footer__title">Liên hệ</h3>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-phone"></span>0989 553 551</a></p>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-facebook-square"></span>/kidy.vn</a></p>
+                            <p class="site-footer__text"><a href="#" class="site-footer__link"><span class="fa fa-youtube"></span>/kidy_channel</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- JS Global Compulsory -->
-    <script src=" ../Jscripts/custom.js "></script>
-    <!-- Js Dev plugin -->
-    <!--[if lt IE 9]>
+        </footer>
+        <!-- JS Global Compulsory -->
+        <script src=" ../Jscripts/custom.js "></script>
+        <!-- Js Dev plugin -->
+        <!--[if lt IE 9]>
         <script src="Jscripts/vendor/respond.js "></script>
         <script src="Jscripts/vendor/html5shiv.js "></script>
         <script src="Jscripts/vendor/placeholder-IE-fixes.js "></script>
